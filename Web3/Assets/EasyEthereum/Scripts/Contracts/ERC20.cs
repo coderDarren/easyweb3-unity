@@ -25,13 +25,13 @@ namespace EasyWeb3 {
         }
 
         public async Task<BigInteger> GetTotalSupply() {
-            var _out = await CallFunction("totalSupply()", new string[]{"int"});
+            var _out = await CallFunction("totalSupply()", new string[]{"uint"});
             TotalSupply = (BigInteger)_out[0];
             return TotalSupply;
         }
 
         public async Task<BigInteger> GetDecimals() {
-            var _out = await CallFunction("decimals()", new string[]{"int"});
+            var _out = await CallFunction("decimals()", new string[]{"uint"});
             Decimals = (BigInteger)_out[0];
             return Decimals;
         }
@@ -55,12 +55,12 @@ namespace EasyWeb3 {
         }
 
         public async Task<BigInteger> GetBalanceOf(string _addr) {
-            var _out = await CallFunction("balanceOf(address)", new string[]{"int"}, new string[]{_addr});
+            var _out = await CallFunction("balanceOf(address)", new string[]{"uint"}, new string[]{_addr});
             return (BigInteger)_out[0];
         }
 
         public async Task<BigInteger> GetAllowance(string _owner, string _spender) {
-            var _out = await CallFunction("allowance(address,address)", new string[]{"int"}, new string[]{_owner,_spender});
+            var _out = await CallFunction("allowance(address,address)", new string[]{"uint"}, new string[]{_owner,_spender});
             return (BigInteger)_out[0];
         }
     }

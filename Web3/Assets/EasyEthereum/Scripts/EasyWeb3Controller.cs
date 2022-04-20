@@ -68,7 +68,7 @@ namespace EasyWeb3 {
             // Debug.Log(_out[0]);
             
             // Debug.Log("TEST: getUint256()");
-            // var _out = await _token.CallFunction("getUint256()", new string[]{"uint256"});
+            // var _out = await _token.CallFunction("getUint256()", new string[]{"uint"});
             // Debug.Log("returned: "+_out[0]);
 
             // Debug.Log("TEST: getUint128()");
@@ -96,26 +96,43 @@ namespace EasyWeb3 {
             // Debug.Log("returned: "+_out[0]);
 
             // Debug.Log("TEST: getDataStruct()");
-            // var _out = await _token.CallFunction("getDataStruct()", new string[]{"uint256","bool","address","string"});
-            // Debug.Log("returned: "+_out[0]+" | "+_out[1]+" | "+_out[2]+" | "+_out[3]);
+            // var _out = await _token.CallFunction("getDataStruct()", new string[]{"struct(uint,string,bool,address)"});
+            // foreach(object _o in _out) {
+            //     Debug.Log(_o);
+            // }
             
             // Debug.Log("TEST: getPrimitiveMultiReturnData()");
-            // var _out = await _token.CallFunction("getPrimitiveMultiReturnData()", new string[]{"uint256","string","bool","address"});
+            // var _out = await _token.CallFunction("getPrimitiveMultiReturnData()", new string[]{"uint","string","bool","address"});
             // Debug.Log("returned length: "+_out.Count);
-            // Debug.Log(_out[0]);
-            // Debug.Log(_out[1]);
-            // Debug.Log(_out[2]);
-            // Debug.Log(_out[3]);
+            // foreach(object _o in _out) {
+            //     Debug.Log(_o);
+            // }
 
-            Debug.Log("TEST: getStructMultiReturnData()");
-            var _out = await _token.CallFunction("getStructMultiReturnData()", new string[]{"uint256","string","bool","address","struct","uint256","string","bool","address"});
-            foreach(object _o in _out) {
-                Debug.Log(_o);
+            // Debug.Log("TEST: getStructMultiReturnData()");
+            // var _out = await _token.CallFunction("getStructMultiReturnData()", new string[]{"uint","string","bool","address","struct(uint,string,bool,address)"});
+            // foreach(object _o in _out) {
+            //     Debug.Log(_o);
+            // }
+
+            // Debug.Log("TEST: getStructArr()");
+            // var _out = await _token.CallFunction("getStructArr(DataStruct[] memory _arr)", new string[]{"struct[](uint,string,bool,address)"}, new string[]{});
+            // foreach(object _o in _out) {
+            //     Debug.Log(_o);
+            // }
+
+            // Debug.Log("TEST: getUintArr()");
+            // var _out = await _token.CallFunction("getUintArr(uint256[])", new string[]{"uint[]"}, new string[]{"uint[](12415,23431,3555523)"});
+            // BigInteger[] _intarr = (BigInteger[])_out[0];
+            // foreach(BigInteger _int in _intarr) {
+            //     Debug.Log(_int);
+            // }
+
+            Debug.Log("TEST: getStrArr()");
+            var _out = await _token.CallFunction("getStrArr(string[])", new string[]{"string[]"}, new string[]{"string[](abcqest,123,341agf3)"});
+            BigInteger[] _strarr = (BigInteger[])_out[0];
+            foreach(BigInteger _s in _strarr) {
+                Debug.Log(_s);
             }
-
-            // Debug.Log((new HexBigInteger("0x0000000000000000000000000000000000000000000000000000000000000060")).Value);
-            // string _data = "0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000464617665000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003";
-            // Debug.Log(_data.Substring(192));
         }
 
         private async void GetChainId() {
