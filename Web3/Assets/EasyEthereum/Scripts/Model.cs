@@ -89,34 +89,52 @@ namespace EasyWeb3 {
             foreach(string _in in _types) {
                 switch (_in) {
                     case "": break;
-                    case "address":
-                        _ret += Web3Utils.HexAddressToString(_values[i]);
+                    case "string":
+                        _ret += Web3Utils.StringToHexBigInteger(_values[i].Length.ToString());
+                        _ret += Web3Utils.StringToHexString(_values[i]);
                         break;
-                    default:
-                        if (_in.Contains("uint256[]") || _in.Contains("uint128[]") || _in.Contains("uint64[]") || _in.Contains("uint32[]") || _in.Contains("uint16[]") || _in.Contains("uint8[]") || _in.Contains("uint[]")) {
-                            string[] _ints = GetInputParams(_values[i]);
-                            _ret += Web3Utils.StringToHexBigInteger(((_ret.Length - 10 + 64)/2).ToString()); // ptr
-                            _ret += Web3Utils.StringToHexBigInteger(_ints.Length.ToString()); // len
-                            foreach (string _intstr in _ints) {
-                                _ret += Web3Utils.StringToHexBigInteger(_intstr);
-                            }
-                        } else if (_in.Contains("string[]")) {
-                            string[] _strings = GetInputParams(_values[i]);
-                            _ret += Web3Utils.StringToHexBigInteger(((_ret.Length - 10 + 64)/2).ToString()); // ptr
-                            _ret += Web3Utils.StringToHexBigInteger(_strings.Length.ToString()); // len
-                            int _tmpLen = _strings.Length*64;
-                            for (int k = 0; k < _strings.Length; k++) {
-                                _ret += Web3Utils.StringToHexBigInteger((((_tmpLen + (k * 128)) / 2).ToString())); // ptr
-                            }
-                            foreach (string _s in _strings) {
-                                _ret += Web3Utils.StringToHexBigInteger(_s.Length.ToString());
-                                _ret += Web3Utils.StringToHexString(_s);
-                            }
-                        } else {
-                            Debug.LogWarning("Could not encode function ["+_signature+"]. Unsupported input type found in signature ("+_in+").");
-                            return _ret;
+                    case "address":
+                        _ret += Web3Utils.AddressToHexString(_values[i]);
+                        break;
+                    case "uint256[]":
+                    case "uint128[]":
+                    case "uint64[]":
+                    case "uint32[]":
+                    case "uint16[]":
+                    case "uint8[]":
+                    case "bool[]":
+                        string[] _ints = GetInputParams(_values[i]);
+                        _ret += Web3Utils.StringToHexBigInteger(((_ret.Length - 10 + 64)/2).ToString()); // ptr
+                        _ret += Web3Utils.StringToHexBigInteger(_ints.Length.ToString()); // len
+                        foreach (string _intstr in _ints) {
+                            _ret += Web3Utils.StringToHexBigInteger(_intstr);
                         }
                         break;
+                    case "string[]":
+                    case "byte[]":
+                        string[] _strings = GetInputParams(_values[i]);
+                        _ret += Web3Utils.StringToHexBigInteger(((_ret.Length - 10 + 64)/2).ToString()); // ptr
+                        _ret += Web3Utils.StringToHexBigInteger(_strings.Length.ToString()); // len
+                        int _tmpLen = _strings.Length*64;
+                        for (int k = 0; k < _strings.Length; k++) {
+                            _ret += Web3Utils.StringToHexBigInteger((((_tmpLen + (k * 128)) / 2).ToString())); // ptr
+                        }
+                        foreach (string _s in _strings) {
+                            _ret += Web3Utils.StringToHexBigInteger(_s.Length.ToString());
+                            _ret += Web3Utils.StringToHexString(_s);
+                        }
+                        break;
+                    case "address[]":
+                        string[] _addrs = GetInputParams(_values[i]);
+                        _ret += Web3Utils.StringToHexBigInteger(((_ret.Length - 10 + 64)/2).ToString()); // ptr
+                        _ret += Web3Utils.StringToHexBigInteger(_addrs.Length.ToString()); // len
+                        foreach (string _s in _addrs) {
+                            _ret += Web3Utils.AddressToHexString(_s);
+                        }
+                        break;
+                    default:
+                        Debug.LogWarning("Could not encode function ["+_signature+"]. Unsupported input type found in signature ("+_in+").");
+                        return _ret;
                 }
                 i++;
             }
@@ -138,27 +156,41 @@ namespace EasyWeb3 {
     }
     public class Decoder {
         public List<object> Decode(string _hex, string[] _outputs, ref int _len) {
-            Debug.Log("decode: "+_hex);
+            // Debug.Log("decode: "+_hex);
             List<object> _ret = new List<object>();
             BigInteger _ptr = 0;
             int _cursor = 0;
             List<int[]> _history = new List<int[]>();
             for (int k = 0; k < _outputs.Length; k++) {
                 string _out = _outputs[k];
-                Debug.Log("Checking output: "+_out+" where cursor = "+_cursor);
+                // Debug.Log("Checking output: "+_out+" where cursor = "+_cursor);
                 if (DidAnalyze(_history, ref _cursor)) {
-                    Debug.Log("Already analyzed here. Moving cursor to "+_cursor);
+                    // Debug.Log("Already analyzed here. Moving cursor to "+_cursor);
                     k--;
                     continue;
                 }
 
                 string _data = "";
+                BigInteger _arrlen = 0;
                 switch (_out) {
                     case "bool":
                         _data = _hex.Substring(_cursor,64);
                         _ret.Add((new HexBigInteger(_data)).Value == 1 ? true : false);
                         _cursor += 64;
                         break;
+                    case "bool[]":
+                        _ptr = GetPointerOrLength(_hex, _cursor) * 2;
+                        _arrlen = GetPointerOrLength(_hex, (int)_ptr);
+                        bool[] _boolarr = new bool[(int)_arrlen];
+                        for (int i = 0; i < _boolarr.Length; i++) {
+                            _data = _hex.Substring((int)_ptr + 64*(i+1), 64);
+                            _boolarr[i] = (new HexBigInteger(_data)).Value == 1 ? true : false;
+                        }
+                        _ret.Add(_boolarr);
+                        AddHistory(ref _history, _ptr, 64*_boolarr.Length+64);
+                        _cursor += 64;
+                        break;
+                    case "byte": // dynamic
                     case "string": // dynamic
                         _ptr = GetPointerOrLength(_hex, _cursor) * 2;
                         _data = _hex.Substring((int)_ptr,128);
@@ -166,14 +198,39 @@ namespace EasyWeb3 {
                         AddHistory(ref _history, _ptr, 128);
                         _cursor += 64;
                         break;
+                    case "byte[]":
+                    case "string[]":
+                        _ptr = GetPointerOrLength(_hex, _cursor) * 2;
+                        _arrlen = GetPointerOrLength(_hex, (int)_ptr);
+                        string[] _strarr = new string[(int)_arrlen];
+                        for (int i = 0; i < _strarr.Length; i++) {
+                            _data = _hex.Substring((int)_ptr + 128*(i+1)+128, 128);
+                            _strarr[i] = Web3Utils.HexToString(_data);
+                        }
+                        _ret.Add(_strarr);
+                        AddHistory(ref _history, _ptr, 128*_strarr.Length+64);
+                        _cursor += 64;
+                        break;
                     case "address":
                         _data = _hex.Substring(_cursor,64);
                         _ret.Add(Web3Utils.HexAddressToString(_data));
                         _cursor += 64;
                         break;
+                    case "address[]":
+                        _ptr = GetPointerOrLength(_hex, _cursor) * 2;
+                        _arrlen = GetPointerOrLength(_hex, (int)_ptr);
+                        string[] _addrarr = new string[(int)_arrlen];
+                        for (int i = 0; i < _addrarr.Length; i++) {
+                            _data = _hex.Substring((int)_ptr + 64*(i+1), 64);
+                            _addrarr[i] = Web3Utils.HexAddressToString(_data);
+                        }
+                        _ret.Add(_addrarr);
+                        AddHistory(ref _history, _ptr, 64*_addrarr.Length+64);
+                        _cursor += 64;
+                        break;
                     case "uint[]":
                         _ptr = GetPointerOrLength(_hex, _cursor) * 2;
-                        BigInteger _arrlen = GetPointerOrLength(_hex, (int)_ptr);
+                        _arrlen = GetPointerOrLength(_hex, (int)_ptr);
                         BigInteger[] _intarr = new BigInteger[(int)_arrlen];
                         for (int i = 0; i < _intarr.Length; i++) {
                             _data = _hex.Substring((int)_ptr + 64*(i+1), 64);
@@ -340,6 +397,9 @@ namespace EasyWeb3 {
         }
         public static string HexAddressToString(string _addr) {
             return "0x"+_addr.Replace("000000000000000000000000", "");
+        }
+        public static string AddressToHexString(string _addr) {
+            return "000000000000000000000000"+_addr.Replace("0x","");
         }
         public static string StringToHexBigInteger(string _intstr) {
             BigInteger _int = 0;
