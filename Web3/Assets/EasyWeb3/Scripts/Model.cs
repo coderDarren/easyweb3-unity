@@ -123,8 +123,10 @@ namespace EasyWeb3 {
                             _lines[_head] = Web3Utils.StringToHexBigInteger((32*_lines.Count).ToString()); // ptr
                             _lines.Add(Web3Utils.StringToHexBigInteger(_strings.Length.ToString())); // len
                             int _tmpLen = _strings.Length*64;
+                            int _addedLen = 0;
                             for (int k = 0; k < _strings.Length; k++) {
-                                _lines.Add(Web3Utils.StringToHexBigInteger((((_tmpLen + (k * 128)) / 2).ToString()))); // ptr
+                                _lines.Add(Web3Utils.StringToHexBigInteger((((_tmpLen + (_addedLen*64) + (k * 128)) / 2).ToString()))); // ptr
+                                _addedLen += (int)((_strings[k].Length-1) / 32);
                             }
                             foreach (string _s in _strings) {
                                 _lines.Add(Web3Utils.StringToHexBigInteger(_s.Length.ToString()));
@@ -187,6 +189,7 @@ namespace EasyWeb3 {
 
                 string _data = "";
                 BigInteger _arrlen = 0;
+                int _byterows = 0;
                 switch (_out) {
                     case "bool":
                         _data = _hex.Substring(_cursor,64);
@@ -208,23 +211,29 @@ namespace EasyWeb3 {
                     case "bytes": // dynamic
                     case "string": // dynamic
                         _ptr = GetPointerOrLength(_hex, _cursor) * 2;
-                        _data = _hex.Substring((int)_ptr,128);
+                        _arrlen = GetPointerOrLength(_hex, (int)_ptr);
+                        _byterows = 1 + ((int)_arrlen-1)/32;
+                        _data = _hex.Substring((int)_ptr+64,64*_byterows);
                         _ret.Add(Web3Utils.HexToString(_data));
-                        AddHistory(ref _history, _ptr, 128);
+                        AddHistory(ref _history, _ptr, 64 + 64*_byterows);
                         _cursor += 64;
                         break;
                     case "bytes[]":
                     case "string[]":
                         _ptr = GetPointerOrLength(_hex, _cursor) * 2;
                         _arrlen = GetPointerOrLength(_hex, (int)_ptr);
+                        int _historylen = 64;
                         string[] _strarr = new string[(int)_arrlen];
                         for (int i = 0; i < _strarr.Length; i++) {
                             var _subptr = GetPointerOrLength(_hex, (int)_ptr + 64*(i+1)) * 2;
-                            _data = _hex.Substring((int)_ptr+(int)_subptr+128, 64);
+                            _arrlen = GetPointerOrLength(_hex, (int)_ptr+(int)_subptr+64);
+                            _byterows = 1 + ((int)_arrlen-1)/32;
+                            _data = _hex.Substring((int)_ptr+(int)_subptr+128, 64*_byterows);
                             _strarr[i] = Web3Utils.HexToString(_data);
+                            _historylen += (64 + _byterows*64);
                         }
                         _ret.Add(_strarr);
-                        AddHistory(ref _history, _ptr, 128*_strarr.Length+64);
+                        AddHistory(ref _history, _ptr, _historylen);
                         _cursor += 64;
                         break;
                     case "address":
@@ -431,7 +440,8 @@ namespace EasyWeb3 {
         public static string StringToHexString(string _str) {
             string _hex = Encoding.UTF8.GetBytes(_str).ToHex();
             string _trailingZeroes = "";
-            for (var i = _hex.Length; i < 64; i++) {
+            int _byteRows = 1 + (_hex.Length-1)/64;
+            for (var i = _hex.Length; i < 64*_byteRows; i++) {
                 _trailingZeroes += "0";
             }
             return _hex+_trailingZeroes;
@@ -449,4 +459,28 @@ namespace EasyWeb3 {
 }
 
 /*
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000001
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000032
+6162637165737472776572776572776572776572776572776566646676646676
+6664676766686173646661736466686766680000000000000000000000000000
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000001
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000035
+6162637165737472776572776572776572776572776572776566646676646676
+6664676767676866686173646661736466686766680000000000000000000000
+
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000002
+0000000000000000000000000000000000000000000000000000000000000040
+0000000000000000000000000000000000000000000000000000000000000080
+0000000000000000000000000000000000000000000000000000000000000021
+6173667364667364666773666467736466676473626361736673646673646667
+6100000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000003
+3132330000000000000000000000000000000000000000000000000000000000
+
 */

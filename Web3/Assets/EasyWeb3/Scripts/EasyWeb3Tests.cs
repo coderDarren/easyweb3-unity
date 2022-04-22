@@ -1,7 +1,12 @@
+/*
+Tests run against contract: https://ropsten.etherscan.io/address/0x0F6F756e309C451558FCf1F7A66aEf0D553A6e86#code
+*/
+
 using System.Numerics;
 using System.Threading.Tasks;
-using UnityEngine;
+using System.Collections.Generic;
 using EasyWeb3;
+using UnityEngine;
 
 public class EasyWeb3Tests : MonoBehaviour {
     private string EasyWeb3UnitTestContract = "0x0F6F756e309C451558FCf1F7A66aEf0D553A6e86";
@@ -11,13 +16,37 @@ public class EasyWeb3Tests : MonoBehaviour {
     }
 
     private async void Load() {
-        await TestERC20Calls();
-        await TestUintCalls();
-        await TestByteCalls();
-        await TestArrayCalls();
-        await TestComplexCalls();
+        // await TestERC20Calls();
+        // await TestUintCalls();
+        // await TestByteCalls();
+        // await TestArrayCalls();
+        // await TestComplexCalls();
+        await TestERC721Calls();
     }
 
+    // NFTs
+    private async Task<bool> TestERC721Calls() {
+        try {
+            string _nftProject = "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"; //boredapeyachtclub
+            ERC721 _nft = new ERC721(_nftProject, ChainId.ETH_MAINNET);
+            Debug.Log("TEST NFT Calls");
+            await _nft.Load();
+            Debug.Log("\tname: "+_nft.Name);
+            Debug.Log("\tsymbol: "+_nft.Symbol);
+            Debug.Log("\ttotal supply: "+_nft.ValueFromDecimals(_nft.TotalSupply));
+            
+            List<NFT> _nfts = await _nft.GetOwnerNFTs("0xf7801B8115f3Fe46AC55f8c0Fdb5243726bdb66A");
+
+
+        } catch (System.Exception _e) {
+            Debug.LogWarning("[TestERC721Calls] Tests Failed: "+_e);
+            return false;
+        }
+
+        return true;
+    }
+
+    // Tokens
     private async Task<bool> TestERC20Calls() {
         try {
             // ERC20 _token = new ERC20("0x1A2933fbA0c6e959c9A2D2c933f3f8AD4aa9f06e", ChainId.ETH_MAINNET);
@@ -45,7 +74,7 @@ public class EasyWeb3Tests : MonoBehaviour {
             Debug.Log("\ttotal supply: "+_token.ValueFromDecimals(_totalSupply));
 
             // // standard calls
-            // Debug.Log("\nStandard ERC20 Data");
+            Debug.Log("\nStandard ERC20 Data");
             BigInteger _balance = await _token.GetBalanceOf("0x34221445c2dd9fd3f41a8a8bfa7d49ec898e0ef4");
             BigInteger _allowance = await _token.GetAllowance("0xbd0dbb9fddc73b6ebffc7c09cfae1b19d6dece40", Constants.ADDR_UNISWAPV2);
             Debug.Log("\nOther ERC20 Calls");
@@ -205,7 +234,7 @@ public class EasyWeb3Tests : MonoBehaviour {
             }
 
             Debug.Log("TEST: getStrArr()");
-            _out = await _token.CallFunction("getStrArr(string[])", new string[]{"string[]"}, new string[]{"string[](abcqest,qwtyr68,bdflflelaela823)"});
+            _out = await _token.CallFunction("getStrArr(string[])", new string[]{"string[]"}, new string[]{"string[](asfsdfsdfgsfdgsdfgdsbcasfsdfsdfgdfgga,123,ldksjflsjf;safjllfkjdsa;flkjasdflkjsfsdfdfgdfgkljlakjfal;kwjkljglkjawe,f31)"});
             string[] _strarr = (string[])_out[0];
             foreach(string _s in _strarr) {
                 Debug.Log("\t"+_s);
@@ -232,3 +261,11 @@ public class EasyWeb3Tests : MonoBehaviour {
         return true;
     }
 }
+/*
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000001
+0000000000000000000000000000000000000000000000000000000000000020
+0000000000000000000000000000000000000000000000000000000000000032
+6162637165737472776572776572776572776572776572776566646676646676
+6664676766686173646661736466686766680000000000000000000000000000
+*/
