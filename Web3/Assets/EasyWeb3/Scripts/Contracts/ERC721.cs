@@ -2,12 +2,18 @@ using System;
 using System.Numerics;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace EasyWeb3 {
+    public class NFTData {
+        public string image;
+    }
     public class NFT {
-        public string Url {get; private set;}
-        public NFT(string _url) {
-            Url = _url;
+        public string Uri {get; private set;}
+        public NFTData Data {get; private set;}
+        public NFT(string _uri, NFTData _data) {
+            Uri = _uri;
+            Data = _data;
         }
     }
     public class ERC721 : Contract {
@@ -60,20 +66,27 @@ namespace EasyWeb3 {
         
         public async Task<string> GetToken(int _tokenId) {
             var _out = await CallFunction("tokenURI(uint256)", new string[]{"string"}, new string[]{_tokenId.ToString()});
-            UnityEngine.Debug.Log(_out.Count);
             return (string)_out[0];
         }
 
         public async Task<List<NFT>> GetOwnerNFTs(string _owner) {
             List<NFT> _nfts = new List<NFT>();
             BigInteger _bal = await GetBalanceOf(_owner);
-            UnityEngine.Debug.Log("Owner Balance: "+_bal);
             for (int i = 0; i < _bal; i++) {
                 BigInteger _token = await GetTokenOfOwnerByIndex(_owner, i);
-                UnityEngine.Debug.Log("Found token: "+_token);
-                string _nftStr = await GetToken((int)_token);
-                UnityEngine.Debug.Log("NFT JSON: "+_nftStr);
-                _nfts.Add(new NFT(_nftStr));
+                string _uri = await GetToken((int)_token);
+                UnityEngine.Debug.Log("NFT uri: "+_uri);
+                string _requrl = _uri.Contains("ipfs://") ? _uri.Replace("ipfs://","https://ipfs.io/ipfs/") : _uri;
+                UnityEngine.Debug.Log("NFT request url: "+_requrl);
+                string _json = await RestService.GetService().Get(_requrl);
+                if (_json.Contains("Error")) {
+                    UnityEngine.Debug.Log(_json);
+                    continue;
+                }
+                UnityEngine.Debug.Log("NFT json: "+_json);
+                NFTData _data = JsonConvert.DeserializeObject<NFTData>(_json);
+                UnityEngine.Debug.Log("NFT image: "+_data.image);
+                _nfts.Add(new NFT(_uri, _data));
             }
             return _nfts;
         }
