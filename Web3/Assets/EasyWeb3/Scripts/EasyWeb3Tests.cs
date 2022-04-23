@@ -3,6 +3,7 @@ Tests run against contract: https://ropsten.etherscan.io/address/0x0F6F756e309C4
 */
 
 using System.Numerics;
+using System.Collections;
 using System.Collections.Generic;
 using UniRx.Async;
 using EasyWeb3;
@@ -15,29 +16,45 @@ public class EasyWeb3Tests : MonoBehaviour {
         Load();
     }
 
+    private void OnDisable() {
+        StopAllCoroutines();
+    }
+
     private async void Load() {
         // await TestERC20Calls();
         // await TestUintCalls();
         // await TestByteCalls();
         // await TestArrayCalls();
         // await TestComplexCalls();
-        await TestERC721Calls();
+        // await TestERC721Calls();
+        await TestScan();
+    }
+
+    private async UniTask<bool> TestScan() {
+        Contract _uniswapv2 = new Contract("0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D", ChainId.ETH_MAINNET);
+        StartCoroutine(Scan(_uniswapv2));
+        return true;
+    }
+
+    private IEnumerator Scan(Contract _c) {
+        while (true) {
+            _c.Scan((_txs)=>{
+                Debug.Log("transactions: "+_txs.Count);
+            });
+            yield return new WaitForSeconds(3);
+        }
     }
 
     // NFTs
     private async UniTask<bool> TestERC721Calls() {
         try {
             
-            // Debug.Log("TEST NFT (BoredApeYachtClub)");
-            // await LoadOwnerNFTS("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D", "0xf7801B8115f3Fe46AC55f8c0Fdb5243726bdb66A");
-            // Debug.Log("TEST NFT (Quantum Art)");
-            // await LoadOwnerNFTS("0x46Ac8540d698167FCBb9e846511Beb8CF8af9BD8", "0x67A74108A9990bbE21582193bB99cbEd6ecfEA30");
-            // Debug.Log("TEST NFT (CyberKongz VX)");
-            // await LoadOwnerNFTS("0x7EA3Cca10668B8346aeC0bf1844A49e995527c8B", "0xcE2a954E8cc24EEc66A56B2f9aDE93AF7568873B");
-            // Debug.Log("TEST NFT (CyberKongz VX)");
-            // await LoadOwnerNFTS("0xED5AF388653567Af2F388E6224dC7C4b3241C544", "0x600235122c6299BA845E6C67f718E0854923040a");
-            // ERC721 _nft = new ERC721("0xED5AF388653567Af2F388E6224dC7C4b3241C544", ChainId.ETH_MAINNET);
-            // BigInteger _token = await _nft.GetTokenOfOwnerByIndex("0x600235122c6299BA845E6C67f718E0854923040a", 1);
+            Debug.Log("TEST NFT (BoredApeYachtClub)");
+            await LoadOwnerNFTS("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D", "0xf7801B8115f3Fe46AC55f8c0Fdb5243726bdb66A");
+            Debug.Log("TEST NFT (Quantum Art)");
+            await LoadOwnerNFTS("0x46Ac8540d698167FCBb9e846511Beb8CF8af9BD8", "0x67A74108A9990bbE21582193bB99cbEd6ecfEA30");
+            Debug.Log("TEST NFT (CyberKongz VX)");
+            await LoadOwnerNFTS("0x7EA3Cca10668B8346aeC0bf1844A49e995527c8B", "0xcE2a954E8cc24EEc66A56B2f9aDE93AF7568873B");
 
         } catch (System.Exception _e) {
             Debug.LogWarning("[TestERC721Calls] Tests Failed: "+_e);

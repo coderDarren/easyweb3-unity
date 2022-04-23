@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.Video;
 using UniRx.Async;
 using EasyWeb3;
 
@@ -10,6 +11,7 @@ public class TriggerNFTLoader : MonoBehaviour {
     public ChainId Web3Chain;
     public string NFTContract;
     public RawImage Img;
+    public VideoPlayer Video;
 
     [Header("Project Details")]
     public Text Name;
@@ -53,7 +55,18 @@ public class TriggerNFTLoader : MonoBehaviour {
     }
 
     private void DrawNFTData(NFT _nft) {
-        Img.texture = _nft.texture;
+        if (_nft.AssetUrl.Contains("mp4")) {
+            Img.gameObject.SetActive(false);
+            Video.gameObject.SetActive(true);
+            Video.url = _nft.Data.image;
+            Video.Play();
+        } else if (_nft.AssetUrl.ToLower().Contains(".png") || _nft.AssetUrl.ToLower().Contains(".jpg") || _nft.AssetUrl.ToLower().Contains(".jpeg") || _nft.AssetUrl.ToLower().Contains("https://ipfs.io/ipfs/")) {
+            Img.gameObject.SetActive(true);
+            Video.gameObject.SetActive(false);
+            Img.texture = _nft.texture;
+        } else {
+            Debug.LogWarning("Unsupported NFT url: "+_nft.AssetUrl+". Contact support if you need help supporting this.");
+        }
         Title.text = _nft.Data.name != null ? _nft.Data.name : 
                     _nft.Data.title != null ? _nft.Data.title : "No Title Available";
         Description.text = _nft.Data.description != null ? _nft.Data.description : "No Description Available";
@@ -121,6 +134,7 @@ public class TriggerNFTLoader : MonoBehaviour {
     private IEnumerator LoadTexture(NFT _nft, float _progress) {
         Debug.Log("\t[TriggerNFTLoader] "+(_progress*100)+"% | Loaded NFT: "+_nft.Data.image);
         string _url = _nft.Data.image.Contains("ipfs://") ? _nft.Data.image.Replace("ipfs://","https://ipfs.io/ipfs/") : _nft.Data.image;
+        _nft.AssetUrl = _url;
         if (_url.Contains("mp4")) {
         } else {
             UnityWebRequest _req = UnityWebRequestTexture.GetTexture(_url);

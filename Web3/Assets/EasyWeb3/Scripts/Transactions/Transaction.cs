@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Nethereum.Web3;
+using Nethereum.RPC;
 using Nethereum.Hex.HexTypes;
 using Nethereum.Hex.HexConvertors.Extensions;
 

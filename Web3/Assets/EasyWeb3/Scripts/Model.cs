@@ -22,11 +22,13 @@ using Nethereum.Contracts;
 using Nethereum.Contracts.Extensions;
 using Nethereum.JsonRpc.Client;
 using Nethereum.RPC.Eth.DTOs;
+using UniRx.Async;
 using UnityEngine;
 
 namespace EasyWeb3 {
     public delegate void StandardDelegate();
     public delegate void StringDelegate(string _s);
+    public delegate void TransactionScanDelegate(List<Nethereum.RPC.Eth.DTOs.Transaction> _txs);
     public enum ChainId {
         ETH_MAINNET,
         ETH_ROPSTEN
@@ -331,6 +333,7 @@ namespace EasyWeb3 {
         public string Name {get;protected set;}
         public string Symbol {get;protected set;}
         public string Owner {get;protected set;}
+        private BigInteger m_LastScannedBlock;
         public Contract(string _contract, ChainId _i) : base(_i) {
             m_Contract = _contract;
         }
@@ -349,7 +352,7 @@ namespace EasyWeb3 {
                 ["0"]
             All Examples at /!!TODO
          */
-        public async Task<List<object>> CallFunction(string _signature, string[] _outputs, string[] _inputs=null) {
+        public async UniTask<List<object>> CallFunction(string _signature, string[] _outputs, string[] _inputs=null) {
             List<object> _ret = new List<object>();
             try {
                 if (_outputs.Length == 0) {
@@ -381,6 +384,28 @@ namespace EasyWeb3 {
                 LogWarning("Something went wrong calling function ["+_signature+"]: "+_e);
             }
 
+            return _ret;
+        }
+
+        public async UniTask<List<Nethereum.RPC.Eth.DTOs.Transaction>> Scan(TransactionScanDelegate _onScanComplete=null) {
+            List<Nethereum.RPC.Eth.DTOs.Transaction> _ret = new List<Nethereum.RPC.Eth.DTOs.Transaction>();
+            HexBigInteger _blockNum = await m_Web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
+            if (_blockNum <= m_LastScannedBlock) {
+                if (_onScanComplete != null)
+                    _onScanComplete(_ret);
+                return _ret;
+            }
+            m_LastScannedBlock = _blockNum;
+            Log("[Scan] Scanning Block "+_blockNum);
+            var _result = await m_Web3.Eth.Blocks.GetBlockWithTransactionsByNumber.SendRequestAsync((HexBigInteger)_blockNum);
+            foreach(Nethereum.RPC.Eth.DTOs.Transaction _tx in _result.Transactions) {
+                if (_tx.To.ToLower() == m_Contract.ToLower()) {
+                    UnityEngine.Debug.Log("Tx found: "+_tx.TransactionHash);
+                    _ret.Add(_tx);
+                }
+            }
+            if (_onScanComplete != null)
+                _onScanComplete(_ret);
             return _ret;
         }
     }

@@ -22,9 +22,11 @@ namespace EasyWeb3 {
         public string Uri {get; private set;}
         public NFTData Data {get; private set;}
         public UnityEngine.Texture2D texture;
+        public string AssetUrl;
         public NFT(string _uri, NFTData _data) {
             Uri = _uri;
             Data = _data;
+            AssetUrl = "";
         }
     }
     public class ERC721 : Contract {
