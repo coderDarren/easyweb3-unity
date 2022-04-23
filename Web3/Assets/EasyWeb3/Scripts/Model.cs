@@ -25,6 +25,8 @@ using Nethereum.RPC.Eth.DTOs;
 using UnityEngine;
 
 namespace EasyWeb3 {
+    public delegate void StandardDelegate();
+    public delegate void StringDelegate(string _s);
     public enum ChainId {
         ETH_MAINNET,
         ETH_ROPSTEN
@@ -215,6 +217,7 @@ namespace EasyWeb3 {
                         _byterows = 1 + ((int)_arrlen-1)/32;
                         _data = _hex.Substring((int)_ptr+64,64*_byterows);
                         _ret.Add(Web3Utils.HexToString(_data));
+                        string _str = Web3Utils.HexToString(_data);
                         AddHistory(ref _history, _ptr, 64 + 64*_byterows);
                         _cursor += 64;
                         break;
@@ -406,19 +409,18 @@ namespace EasyWeb3 {
         }
         public static string HexToString(string _hex) {
             byte[] _bytes = HexUTF8String.CreateFromHex(_hex).ToHexByteArray();
-            char[] _chars = new char[_bytes.Length];
+            List<char> _chars = new List<char>();
             var i = 0;
             foreach (byte _byte in _bytes)
             {
                 char _char = (char)_byte;
                 int _code = (int)_char;
                 if (_code > 31 && _code < 123) {
-                    _chars[i] = _char;
+                    _chars.Add(_char);
                     i++;
                 }
             }
-            string _ret = new string(_chars);
-            _ret = _ret.Trim();
+            string _ret = new string(_chars.ToArray());
             return _ret;
         }
         public static string HexAddressToString(string _addr) {

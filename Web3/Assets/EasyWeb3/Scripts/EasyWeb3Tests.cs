@@ -3,8 +3,8 @@ Tests run against contract: https://ropsten.etherscan.io/address/0x0F6F756e309C4
 */
 
 using System.Numerics;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using UniRx.Async;
 using EasyWeb3;
 using UnityEngine;
 
@@ -25,18 +25,19 @@ public class EasyWeb3Tests : MonoBehaviour {
     }
 
     // NFTs
-    private async Task<bool> TestERC721Calls() {
+    private async UniTask<bool> TestERC721Calls() {
         try {
-            string _nftProject = "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"; //boredapeyachtclub
-            ERC721 _nft = new ERC721(_nftProject, ChainId.ETH_MAINNET);
-            Debug.Log("TEST NFT Calls");
-            await _nft.Load();
-            Debug.Log("\tname: "+_nft.Name);
-            Debug.Log("\tsymbol: "+_nft.Symbol);
-            Debug.Log("\ttotal supply: "+_nft.ValueFromDecimals(_nft.TotalSupply));
             
-            List<NFT> _nfts = await _nft.GetOwnerNFTs("0xf7801B8115f3Fe46AC55f8c0Fdb5243726bdb66A");
-
+            // Debug.Log("TEST NFT (BoredApeYachtClub)");
+            // await LoadOwnerNFTS("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D", "0xf7801B8115f3Fe46AC55f8c0Fdb5243726bdb66A");
+            // Debug.Log("TEST NFT (Quantum Art)");
+            // await LoadOwnerNFTS("0x46Ac8540d698167FCBb9e846511Beb8CF8af9BD8", "0x67A74108A9990bbE21582193bB99cbEd6ecfEA30");
+            // Debug.Log("TEST NFT (CyberKongz VX)");
+            // await LoadOwnerNFTS("0x7EA3Cca10668B8346aeC0bf1844A49e995527c8B", "0xcE2a954E8cc24EEc66A56B2f9aDE93AF7568873B");
+            // Debug.Log("TEST NFT (CyberKongz VX)");
+            // await LoadOwnerNFTS("0xED5AF388653567Af2F388E6224dC7C4b3241C544", "0x600235122c6299BA845E6C67f718E0854923040a");
+            // ERC721 _nft = new ERC721("0xED5AF388653567Af2F388E6224dC7C4b3241C544", ChainId.ETH_MAINNET);
+            // BigInteger _token = await _nft.GetTokenOfOwnerByIndex("0x600235122c6299BA845E6C67f718E0854923040a", 1);
 
         } catch (System.Exception _e) {
             Debug.LogWarning("[TestERC721Calls] Tests Failed: "+_e);
@@ -46,8 +47,25 @@ public class EasyWeb3Tests : MonoBehaviour {
         return true;
     }
 
+    private async UniTask<bool> LoadOwnerNFTS(string _nftContract, string _nftOwner) {
+        ERC721 _nft = new ERC721(_nftContract, ChainId.ETH_MAINNET);
+        await _nft.Load();
+        Debug.Log("\tname: "+_nft.Name);
+        Debug.Log("\tsymbol: "+_nft.Symbol);
+        Debug.Log("\ttotal supply: "+_nft.ValueFromDecimals(_nft.TotalSupply));
+        Debug.Log("Getting NFTs from an owner...");
+        List<NFT> _nfts = await _nft.GetOwnerNFTs(_nftOwner,
+            (_nft,_progress) => { // called when an nft is found
+                Debug.Log("\t"+(_progress*100)+"% | Loaded NFT: "+_nft.Data.image);
+            },
+            (_nftId, _error) => { // called when an nft fails to load
+                Debug.LogWarning("\tFailed to load tokenId "+_nftId+": "+_error);
+            });
+        return true;
+    }
+
     // Tokens
-    private async Task<bool> TestERC20Calls() {
+    private async UniTask<bool> TestERC20Calls() {
         try {
             // ERC20 _token = new ERC20("0x1A2933fbA0c6e959c9A2D2c933f3f8AD4aa9f06e", ChainId.ETH_MAINNET);
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
@@ -88,7 +106,7 @@ public class EasyWeb3Tests : MonoBehaviour {
         return true;
     }
 
-    private async Task<bool> TestUintCalls() {
+    private async UniTask<bool> TestUintCalls() {
         try {
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
@@ -127,7 +145,7 @@ public class EasyWeb3Tests : MonoBehaviour {
         return true;
     }
 
-    private async Task<bool> TestByteCalls() {
+    private async UniTask<bool> TestByteCalls() {
         try {
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
@@ -150,7 +168,7 @@ public class EasyWeb3Tests : MonoBehaviour {
         return true;
     }
 
-    private async Task<bool> TestComplexCalls() {
+    private async UniTask<bool> TestComplexCalls() {
         try {
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
@@ -222,7 +240,7 @@ public class EasyWeb3Tests : MonoBehaviour {
         return true;
     }
 
-    private async Task<bool> TestArrayCalls() {
+    private async UniTask<bool> TestArrayCalls() {
         try{
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
