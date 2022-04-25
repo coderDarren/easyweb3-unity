@@ -28,10 +28,14 @@ using UnityEngine;
 namespace EasyWeb3 {
     public delegate void StandardDelegate();
     public delegate void StringDelegate(string _s);
-    public delegate void TransactionScanDelegate(List<Nethereum.RPC.Eth.DTOs.Transaction> _txs);
+    public delegate void TransactionScanDelegate(List<Nethereum.RPC.Eth.DTOs.Transaction> _txs, BigInteger _blockNum, bool _newBlock);
     public enum ChainId {
         ETH_MAINNET,
-        ETH_ROPSTEN
+        ETH_ROPSTEN,
+        BSC_MAINNET,
+        BSC_TESTNET,
+        MATIC_MAINNET,
+        MATIC_TESTNET
     }
     public class Web3ify {
         protected Web3 m_Web3;
@@ -177,7 +181,6 @@ namespace EasyWeb3 {
     }
     public class Decoder {
         public List<object> Decode(string _hex, string[] _outputs, ref int _len) {
-            // Debug.Log("decode: "+_hex);
             List<object> _ret = new List<object>();
             BigInteger _ptr = 0;
             int _cursor = 0;
@@ -373,12 +376,13 @@ namespace EasyWeb3 {
 
                 string[] _inputTypes = _signature.Substring(_inputStart+1, _inputEnd-_inputStart-1).Split(',');
                 string _encodedInput = new Encoder().Encode(_signature, _inputTypes, _inputs);
-                // Debug.Log("Encoded input: "+_encodedInput);
+                // Debug.Log("Encoded input: "+_encodedInput+" to contract: "+m_Contract);
                 
                 CallInput _input = new CallInput(_encodedInput, m_Contract);
                 string _result = await m_Web3.Eth.Transactions.Call.SendRequestAsync(_input);
                 _result = _result.Substring(2);
 
+                // Debug.Log("decode: "+_result);
                 int _l = 0; _ret = new Decoder().Decode(_result, _outputs, ref _l);
             } catch (System.Exception _e) {
                 LogWarning("Something went wrong calling function ["+_signature+"]: "+_e);
@@ -390,9 +394,9 @@ namespace EasyWeb3 {
         public async UniTask<List<Nethereum.RPC.Eth.DTOs.Transaction>> Scan(TransactionScanDelegate _onScanComplete=null) {
             List<Nethereum.RPC.Eth.DTOs.Transaction> _ret = new List<Nethereum.RPC.Eth.DTOs.Transaction>();
             HexBigInteger _blockNum = await m_Web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
-            if (_blockNum <= m_LastScannedBlock) {
+            if (_blockNum <= m_LastScannedBlock && m_LastScannedBlock != 0) {
                 if (_onScanComplete != null)
-                    _onScanComplete(_ret);
+                    _onScanComplete(_ret, _blockNum, false);
                 return _ret;
             }
             m_LastScannedBlock = _blockNum;
@@ -405,7 +409,7 @@ namespace EasyWeb3 {
                 }
             }
             if (_onScanComplete != null)
-                _onScanComplete(_ret);
+                _onScanComplete(_ret, _blockNum, true);
             return _ret;
         }
     }
@@ -475,39 +479,20 @@ namespace EasyWeb3 {
         }
         public static string GetNodeURL(ChainId _chainId) {
             switch (_chainId) {
-                case ChainId.ETH_ROPSTEN: // ropsten
-                    return Constants.NODEDEFAULT_ETH_ROPSTEN;
-                case ChainId.ETH_MAINNET: // mainnet
-                    return Constants.NODEDEFAULT_ETH_MAINNET;
+                case ChainId.ETH_ROPSTEN:
+                    return Constants.NODE_ETH_ROPSTEN;
+                case ChainId.ETH_MAINNET:
+                    return Constants.NODE_ETH_MAINNET;
+                case ChainId.BSC_TESTNET:
+                    return Constants.NODE_BSC_TESTNET;
+                case ChainId.BSC_MAINNET:
+                    return Constants.NODE_BSC_MAINNET;
+                case ChainId.MATIC_TESTNET:
+                    return Constants.NODE_MATIC_TESTNET;
+                case ChainId.MATIC_MAINNET:
+                    return Constants.NODE_MATIC_MAINNET;
             }
-            return Constants.NODEDEFAULT_ETH_ROPSTEN;
+            return Constants.NODE_ETH_ROPSTEN;
         }
     }
 }
-
-/*
-0000000000000000000000000000000000000000000000000000000000000020
-0000000000000000000000000000000000000000000000000000000000000001
-0000000000000000000000000000000000000000000000000000000000000020
-0000000000000000000000000000000000000000000000000000000000000032
-6162637165737472776572776572776572776572776572776566646676646676
-6664676766686173646661736466686766680000000000000000000000000000
-
-0000000000000000000000000000000000000000000000000000000000000020
-0000000000000000000000000000000000000000000000000000000000000001
-0000000000000000000000000000000000000000000000000000000000000020
-0000000000000000000000000000000000000000000000000000000000000035
-6162637165737472776572776572776572776572776572776566646676646676
-6664676767676866686173646661736466686766680000000000000000000000
-
-0000000000000000000000000000000000000000000000000000000000000020
-0000000000000000000000000000000000000000000000000000000000000002
-0000000000000000000000000000000000000000000000000000000000000040
-0000000000000000000000000000000000000000000000000000000000000080
-0000000000000000000000000000000000000000000000000000000000000021
-6173667364667364666773666467736466676473626361736673646673646667
-6100000000000000000000000000000000000000000000000000000000000000
-0000000000000000000000000000000000000000000000000000000000000003
-3132330000000000000000000000000000000000000000000000000000000000
-
-*/

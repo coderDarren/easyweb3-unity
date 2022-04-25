@@ -19,11 +19,13 @@ namespace EasyWeb3 {
         public NFTAttribute[] attributes;
     }
     public class NFT {
+        public int Id {get; private set;}
         public string Uri {get; private set;}
         public NFTData Data {get; private set;}
         public UnityEngine.Texture2D texture;
         public string AssetUrl;
-        public NFT(string _uri, NFTData _data) {
+        public NFT(int _id, string _uri, NFTData _data) {
+            Id = _id;
             Uri = _uri;
             Data = _data;
             AssetUrl = "";
@@ -92,9 +94,8 @@ namespace EasyWeb3 {
                     string _uri = await GetToken((int)_token);
                     string _requrl = _uri.Contains("ipfs://") ? _uri.Replace("ipfs://","https://ipfs.io/ipfs/") : _uri;
                     string _json = await RestService.GetService().Get(_requrl);
-                    UnityEngine.Debug.Log(_requrl);
                     NFTData _data = JsonConvert.DeserializeObject<NFTData>(_json);
-                    NFT _nft = new NFT(_uri, _data);
+                    NFT _nft = new NFT((int)_token, _uri, _data);
                     _nfts.Add(_nft);
                     if (_onProgress != null) {
                         _onProgress(_nft, (i+1)/(float)_bal);
@@ -108,9 +109,6 @@ namespace EasyWeb3 {
             return _nfts;
         }
 
-        // function tokenByIndex(uint256 _index) external view returns (uint256);
-        // function tokenOfOwnerByIndex(address _owner, uint256 _index) external view returns (uint256);
-        // function tokenURI(uint256 _tokenId) external view returns (string);
         // function ownerOf(uint256 _tokenId) external view returns (address);
         // function getApproved(uint256 _tokenId) external view returns (address); (return who can sell this tokenId)
         // function isApprovedForAll(address _owner, address _operator) external view returns (bool); (can _operator sell all tokenIds)
@@ -137,7 +135,3 @@ namespace EasyWeb3 {
         */
     }
 }
-/*
-000000000000000000000000600235122c6299BA845E6C67f718E0854923040a
-0000000000000000000000000000000000000000000000000000000000000001
-*/

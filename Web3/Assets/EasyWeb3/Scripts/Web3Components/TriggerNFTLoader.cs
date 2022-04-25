@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using System.Threading;
 using UniRx.Async;
 using EasyWeb3;
 
@@ -29,21 +30,23 @@ public class TriggerNFTLoader : MonoBehaviour {
     private bool m_DidLoadNFTs;
     private bool m_IsLoading;
     private List<NFT> m_NFTs;
+    private Dictionary<int,Thread> m_Threads; // threading is optional; simply improves performance
     private int m_NFTCycleIndex;
 
     private void Start() {
         m_NftContract = new ERC721(NFTContract, Web3Chain);
         m_NFTs = new List<NFT>();
+        m_Threads = new Dictionary<int,Thread>();
         StartCoroutine("CycleTextures");
         Load();
     }
 
-    private void OnApplicationQuit() {
-        StopAllCoroutines();
-    }
-
     private void OnDisable() {
         StopAllCoroutines();
+        foreach(KeyValuePair<int,Thread> _kvp in m_Threads) {
+            Thread _t = (Thread)_kvp.Value;
+            _t.Join();
+        }
     }
 
     private void OnTriggerEnter(Collider _col) {
@@ -93,15 +96,20 @@ public class TriggerNFTLoader : MonoBehaviour {
     }
 
     private async UniTask<bool> LoadOwnerNFTS(string _nftContract, string _nftOwner) {
-        ERC721 _nft = new ERC721(_nftContract, ChainId.ETH_MAINNET);
         try {
             m_IsLoading = true;
             m_DidLoadNFTs = true;
             Debug.Log("[TriggerNFTLoader] Getting NFTs from owner...");
-            List<NFT> _nfts = await _nft.GetOwnerNFTs(_nftOwner,
+            List<NFT> _nfts = await m_NftContract.GetOwnerNFTs(_nftOwner,
                 (_nft,_progress) => { // called when an nft is found
                     Progress.text = "Loaded "+((int)(_progress*100))+"%";
-                    StartCoroutine(LoadTexture(_nft,_progress));
+                    // Thread _t = new Thread(()=>{
+                    //     LoadTexture(_nft);
+                    //     while (m_Threads.ContainsKey(_nft.Id)) {}
+                    // });
+                    // m_Threads.Add(_nft.Id, _t);
+                    // _t.Start();
+                    LoadTexture(_nft);
                 },
                 (_nftId, _error) => { // called when an nft fails to load
                     Debug.LogWarning("\t[TriggerNFTLoader] Failed to load tokenId "+_nftId+": "+_error);
@@ -115,8 +123,10 @@ public class TriggerNFTLoader : MonoBehaviour {
 
     private IEnumerator LoadAllNFTs(Web3Player _player) {
         yield return null;
-        LoadOwnerNFTS(NFTContract, _player.ethAddress);
+        LoadOwnerNFTS(NFTContract, _player.GetAddressFromChain(Web3Chain));
     }
+
+    // private async Task<bool> 
 
     private IEnumerator CycleTextures() {
         while (true) {
@@ -131,23 +141,22 @@ public class TriggerNFTLoader : MonoBehaviour {
         }
     }
 
-    private IEnumerator LoadTexture(NFT _nft, float _progress) {
-        Debug.Log("\t[TriggerNFTLoader] "+(_progress*100)+"% | Loaded NFT: "+_nft.Data.image);
+    private async UniTask<bool> LoadTexture(NFT _nft) {
+        Debug.Log("\t[TriggerNFTLoader] Loaded NFT: "+_nft.Data.image);
         string _url = _nft.Data.image.Contains("ipfs://") ? _nft.Data.image.Replace("ipfs://","https://ipfs.io/ipfs/") : _nft.Data.image;
         _nft.AssetUrl = _url;
         if (_url.Contains("mp4")) {
         } else {
             UnityWebRequest _req = UnityWebRequestTexture.GetTexture(_url);
-            yield return _req.SendWebRequest();
-            Texture2D _tex = new Texture2D (1, 1);
-            _tex = ((DownloadHandlerTexture)_req.downloadHandler).texture;
+            await _req.SendWebRequest();
+            Texture2D _tex = ((DownloadHandlerTexture)_req.downloadHandler).texture;
             _nft.texture = _tex;
             m_NFTs.Add(_nft);
             if (m_NFTs.Count == 1) {
                 DrawNFTData(_nft);
             }
+            m_Threads.Remove(_nft.Id);
         }
+        return true;
     }
 }
-//0x7DD04448c6CD405345D03529Bff9749fd89F8F4F crypto pills
-//0x7AB2352b1D2e185560494D5e577F9D3c238b78C5 adam bomb squad

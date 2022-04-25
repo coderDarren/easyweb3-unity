@@ -8,8 +8,12 @@ using System.Collections.Generic;
 using UniRx.Async;
 using EasyWeb3;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class EasyWeb3Tests : MonoBehaviour {
+public class TestViewer : MonoBehaviour {
+
+    public Text Feed;
+
     private string EasyWeb3UnitTestContract = "0x0F6F756e309C451558FCf1F7A66aEf0D553A6e86";
 
     private void Start() {
@@ -21,64 +25,20 @@ public class EasyWeb3Tests : MonoBehaviour {
     }
 
     private async void Load() {
-        // await TestERC20Calls();
-        // await TestUintCalls();
-        // await TestByteCalls();
-        // await TestArrayCalls();
-        // await TestComplexCalls();
-        // await TestERC721Calls();
-        await TestScan();
+        await TestERC20Calls();
+        await TestUintCalls();
+        await TestByteCalls();
+        await TestArrayCalls();
+        await TestComplexCalls();
+        await TestERC721Calls();
+    }
+    
+    private void Pass(string _type) {
+        Feed.text += "[Test] "+_type+": <color=#CAEA9C>Passed</color>\n";
     }
 
-    private async UniTask<bool> TestScan() {
-        Contract _uniswapv2 = new Contract("0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D", ChainId.ETH_MAINNET);
-        StartCoroutine(Scan(_uniswapv2));
-        return true;
-    }
-
-    private IEnumerator Scan(Contract _c) {
-        while (true) {
-            _c.Scan((_txs)=>{
-                Debug.Log("transactions: "+_txs.Count);
-            });
-            yield return new WaitForSeconds(3);
-        }
-    }
-
-    // NFTs
-    private async UniTask<bool> TestERC721Calls() {
-        try {
-            
-            Debug.Log("TEST NFT (BoredApeYachtClub)");
-            await LoadOwnerNFTS("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D", "0xf7801B8115f3Fe46AC55f8c0Fdb5243726bdb66A");
-            Debug.Log("TEST NFT (Quantum Art)");
-            await LoadOwnerNFTS("0x46Ac8540d698167FCBb9e846511Beb8CF8af9BD8", "0x67A74108A9990bbE21582193bB99cbEd6ecfEA30");
-            Debug.Log("TEST NFT (CyberKongz VX)");
-            await LoadOwnerNFTS("0x7EA3Cca10668B8346aeC0bf1844A49e995527c8B", "0xcE2a954E8cc24EEc66A56B2f9aDE93AF7568873B");
-
-        } catch (System.Exception _e) {
-            Debug.LogWarning("[TestERC721Calls] Tests Failed: "+_e);
-            return false;
-        }
-
-        return true;
-    }
-
-    private async UniTask<bool> LoadOwnerNFTS(string _nftContract, string _nftOwner) {
-        ERC721 _nft = new ERC721(_nftContract, ChainId.ETH_MAINNET);
-        await _nft.Load();
-        Debug.Log("\tname: "+_nft.Name);
-        Debug.Log("\tsymbol: "+_nft.Symbol);
-        Debug.Log("\ttotal supply: "+_nft.ValueFromDecimals(_nft.TotalSupply));
-        Debug.Log("Getting NFTs from an owner...");
-        List<NFT> _nfts = await _nft.GetOwnerNFTs(_nftOwner,
-            (_nft,_progress) => { // called when an nft is found
-                Debug.Log("\t"+(_progress*100)+"% | Loaded NFT: "+_nft.Data.image);
-            },
-            (_nftId, _error) => { // called when an nft fails to load
-                Debug.LogWarning("\tFailed to load tokenId "+_nftId+": "+_error);
-            });
-        return true;
+    private void Fail(string _type) {
+        Feed.text += "[Test] "+_type+": <color=#c7262d>Failed</color>\n";
     }
 
     // Tokens
@@ -115,8 +75,10 @@ public class EasyWeb3Tests : MonoBehaviour {
             Debug.Log("\nOther ERC20 Calls");
             Debug.Log("\tbalance: "+_token.ValueFromDecimals(_balance));
             Debug.Log("\tallowance: "+_token.ValueFromDecimals(_allowance));
+            Pass("ERC20 Calls");
         } catch (System.Exception _e) {
             Debug.LogWarning("[TestERC20Calls] Tests Failed: "+_e);
+            Fail("ERC20 Calls");
             return false;
         }
 
@@ -154,8 +116,10 @@ public class EasyWeb3Tests : MonoBehaviour {
             Debug.Log("TEST: getUint()");
             _out = await _token.CallFunction("getUint()", new string[]{"uint"});
             Debug.Log("\treturned: "+_out[0]);
+            Pass("Uint Type Calls");
         } catch (System.Exception _e) {
             Debug.LogWarning("[TestUintCalls] Tests Failed: "+_e);
+            Fail("Uint Type Calls");
             return false;
         }
 
@@ -176,9 +140,10 @@ public class EasyWeb3Tests : MonoBehaviour {
             foreach(string _s in _bytesarr) {
                 Debug.Log("\t"+_s);
             }
-
+            Pass("Byte Calls");
         } catch (System.Exception _e) {
             Debug.LogWarning("[TestByteCalls] Tests Failed: "+_e);
+            Fail("Byte Calls");
             return false;
         }
 
@@ -248,9 +213,10 @@ public class EasyWeb3Tests : MonoBehaviour {
             }
             Debug.Log("\tstring: "+_str);
 
-
+            Pass("Complex Structure Calls");
         } catch (System.Exception _e) {
             Debug.LogWarning("[TestComplexCalls] Tests Failed: "+_e);
+            Fail("Complex Structure Calls");
             return false;
         }
 
@@ -288,19 +254,51 @@ public class EasyWeb3Tests : MonoBehaviour {
             foreach(string _s in _addrarr) {
                 Debug.Log("\t"+_s);
             }
+            Pass("Array Calls");
         } catch (System.Exception _e) {
             Debug.LogWarning("[TestArrayCalls] Tests Failed: "+_e);
+            Fail("Array Calls");
             return false;
         }
 
         return true;
     }
+
+    // NFTs
+    private async UniTask<bool> TestERC721Calls() {
+        try {
+            
+            Debug.Log("TEST NFT (BoredApeYachtClub)");
+            await LoadOwnerNFTS("0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D", "0xf7801B8115f3Fe46AC55f8c0Fdb5243726bdb66A");
+            // Debug.Log("TEST NFT (Quantum Art)");
+            // await LoadOwnerNFTS("0x46Ac8540d698167FCBb9e846511Beb8CF8af9BD8", "0x67A74108A9990bbE21582193bB99cbEd6ecfEA30");
+            // Debug.Log("TEST NFT (CyberKongz VX)");
+            // await LoadOwnerNFTS("0x7EA3Cca10668B8346aeC0bf1844A49e995527c8B", "0xcE2a954E8cc24EEc66A56B2f9aDE93AF7568873B");
+
+            Pass("ERC721 (NFT) Calls");
+        } catch (System.Exception _e) {
+            Debug.LogWarning("[TestERC721Calls] Tests Failed: "+_e);
+            Fail("ERC721 (NFT) Calls");
+            return false;
+        }
+
+        return true;
+    }
+
+    private async UniTask<bool> LoadOwnerNFTS(string _nftContract, string _nftOwner) {
+        ERC721 _nft = new ERC721(_nftContract, ChainId.ETH_MAINNET);
+        await _nft.Load();
+        Debug.Log("\tname: "+_nft.Name);
+        Debug.Log("\tsymbol: "+_nft.Symbol);
+        Debug.Log("\ttotal supply: "+_nft.ValueFromDecimals(_nft.TotalSupply));
+        Debug.Log("Getting NFTs from an owner...");
+        List<NFT> _nfts = await _nft.GetOwnerNFTs(_nftOwner,
+            (_nft,_progress) => { // called when an nft is found
+                Debug.Log("\t"+(_progress*100)+"% | Loaded NFT: "+_nft.Data.image);
+            },
+            (_nftId, _error) => { // called when an nft fails to load
+                Debug.LogWarning("\tFailed to load tokenId "+_nftId+": "+_error);
+            });
+        return true;
+    }
 }
-/*
-0000000000000000000000000000000000000000000000000000000000000020
-0000000000000000000000000000000000000000000000000000000000000001
-0000000000000000000000000000000000000000000000000000000000000020
-0000000000000000000000000000000000000000000000000000000000000032
-6162637165737472776572776572776572776572776572776566646676646676
-6664676766686173646661736466686766680000000000000000000000000000
-*/
