@@ -15,14 +15,11 @@ using Nethereum.Hex.HexTypes;
 using Nethereum.Hex.HexConvertors;
 using Nethereum.Hex.HexConvertors.Extensions;
 using Org.BouncyCastle.Crypto.Digests;
-using Nethereum.ABI.FunctionEncoding.Attributes;
 using Nethereum.Util;
-using Nethereum.ABI;
 using Nethereum.Contracts;
 using Nethereum.Contracts.Extensions;
 using Nethereum.JsonRpc.Client;
 using Nethereum.RPC.Eth.DTOs;
-using UniRx.Async;
 using UnityEngine;
 
 namespace EasyWeb3 {
@@ -215,7 +212,6 @@ namespace EasyWeb3 {
                         AddHistory(ref _history, _ptr, 64*_boolarr.Length+64);
                         _cursor += 64;
                         break;
-                    case "bytes": // dynamic
                     case "string": // dynamic
                         _ptr = GetPointerOrLength(_hex, _cursor) * 2;
                         _arrlen = GetPointerOrLength(_hex, (int)_ptr);
@@ -244,6 +240,7 @@ namespace EasyWeb3 {
                         AddHistory(ref _history, _ptr, _historylen);
                         _cursor += 64;
                         break;
+                    case "bytes":
                     case "address":
                         _data = _hex.Substring(_cursor,64);
                         _ret.Add(Web3Utils.HexAddressToString(_data));
@@ -355,7 +352,7 @@ namespace EasyWeb3 {
                 ["0"]
             All Examples at /!!TODO
          */
-        public async UniTask<List<object>> CallFunction(string _signature, string[] _outputs, string[] _inputs=null) {
+        public async Task<List<object>> CallFunction(string _signature, string[] _outputs, string[] _inputs=null) {
             List<object> _ret = new List<object>();
             try {
                 if (_outputs.Length == 0) {
@@ -391,7 +388,7 @@ namespace EasyWeb3 {
             return _ret;
         }
 
-        public async UniTask<List<Nethereum.RPC.Eth.DTOs.Transaction>> Scan(TransactionScanDelegate _onScanComplete=null) {
+        public async Task<List<Nethereum.RPC.Eth.DTOs.Transaction>> Scan(TransactionScanDelegate _onScanComplete=null) {
             List<Nethereum.RPC.Eth.DTOs.Transaction> _ret = new List<Nethereum.RPC.Eth.DTOs.Transaction>();
             HexBigInteger _blockNum = await m_Web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
             if (_blockNum <= m_LastScannedBlock && m_LastScannedBlock != 0) {
@@ -400,13 +397,31 @@ namespace EasyWeb3 {
                 return _ret;
             }
             m_LastScannedBlock = _blockNum;
-            Log("[Scan] Scanning Block "+_blockNum);
+            // Log("[Scan] Scanning Block "+_blockNum);
             var _result = await m_Web3.Eth.Blocks.GetBlockWithTransactionsByNumber.SendRequestAsync((HexBigInteger)_blockNum);
             foreach(Nethereum.RPC.Eth.DTOs.Transaction _tx in _result.Transactions) {
                 if (_tx.To.ToLower() == m_Contract.ToLower()) {
-                    UnityEngine.Debug.Log("Tx found: "+_tx.TransactionHash);
                     _ret.Add(_tx);
                 }
+            }
+            if (_onScanComplete != null)
+                _onScanComplete(_ret, _blockNum, true);
+            return _ret;
+        }
+
+        public async Task<List<Nethereum.RPC.Eth.DTOs.Transaction>> ScanAll(TransactionScanDelegate _onScanComplete=null) {
+            List<Nethereum.RPC.Eth.DTOs.Transaction> _ret = new List<Nethereum.RPC.Eth.DTOs.Transaction>();
+            HexBigInteger _blockNum = await m_Web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
+            if (_blockNum <= m_LastScannedBlock && m_LastScannedBlock != 0) {
+                if (_onScanComplete != null)
+                    _onScanComplete(_ret, _blockNum, false);
+                return _ret;
+            }
+            m_LastScannedBlock = _blockNum;
+            // Log("[Scan] Scanning Block "+_blockNum);
+            var _result = await m_Web3.Eth.Blocks.GetBlockWithTransactionsByNumber.SendRequestAsync((HexBigInteger)_blockNum);
+            foreach(Nethereum.RPC.Eth.DTOs.Transaction _tx in _result.Transactions) {
+                _ret.Add(_tx);
             }
             if (_onScanComplete != null)
                 _onScanComplete(_ret, _blockNum, true);

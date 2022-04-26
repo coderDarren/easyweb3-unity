@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections.Generic;
-using UniRx.Async;
+using System.Threading.Tasks;
 
 namespace EasyWeb3 {
     public class RestService 
@@ -23,7 +23,7 @@ namespace EasyWeb3 {
             return m_Service;
         }
 
-        public async UniTask<string> Post(string _url, string _body) {
+        public async Task<string> Post(string _url, string _body) {
             try {
                 var _content = new StringContent(_body, System.Text.Encoding.UTF8, "application/json");
                 HttpResponseMessage _response = await m_Http.PostAsync(_url, _content);
@@ -35,7 +35,7 @@ namespace EasyWeb3 {
             }
         }
 
-        public async UniTask<string> Get(string _url) {
+        public async Task<string> Get(string _url) {
             try {
                 HttpResponseMessage _response = await m_Http.GetAsync(_url);
                 _response.EnsureSuccessStatusCode();

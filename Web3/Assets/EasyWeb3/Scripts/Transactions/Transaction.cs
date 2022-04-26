@@ -29,7 +29,6 @@ namespace EasyWeb3 {
 
         public List<object> GetInputs(string[] _types) {
             int _l = 0; 
-            UnityEngine.Debug.Log("decoding "+m_Tx.Input.Substring(10));
             List<object> _ret = new Decoder().Decode(m_Tx.Input.Substring(10), _types, ref _l);
             return _ret;
         }

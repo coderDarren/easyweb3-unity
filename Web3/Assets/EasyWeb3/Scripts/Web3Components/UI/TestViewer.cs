@@ -5,7 +5,7 @@ Tests run against contract: https://ropsten.etherscan.io/address/0x0F6F756e309C4
 using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
-using UniRx.Async;
+using System.Threading.Tasks;
 using EasyWeb3;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,7 +42,7 @@ public class TestViewer : MonoBehaviour {
     }
 
     // Tokens
-    private async UniTask<bool> TestERC20Calls() {
+    private async Task<bool> TestERC20Calls() {
         try {
             // ERC20 _token = new ERC20("0x1A2933fbA0c6e959c9A2D2c933f3f8AD4aa9f06e", ChainId.ETH_MAINNET);
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
@@ -85,7 +85,7 @@ public class TestViewer : MonoBehaviour {
         return true;
     }
 
-    private async UniTask<bool> TestUintCalls() {
+    private async Task<bool> TestUintCalls() {
         try {
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
@@ -126,7 +126,7 @@ public class TestViewer : MonoBehaviour {
         return true;
     }
 
-    private async UniTask<bool> TestByteCalls() {
+    private async Task<bool> TestByteCalls() {
         try {
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
@@ -150,7 +150,7 @@ public class TestViewer : MonoBehaviour {
         return true;
     }
 
-    private async UniTask<bool> TestComplexCalls() {
+    private async Task<bool> TestComplexCalls() {
         try {
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
@@ -223,7 +223,7 @@ public class TestViewer : MonoBehaviour {
         return true;
     }
 
-    private async UniTask<bool> TestArrayCalls() {
+    private async Task<bool> TestArrayCalls() {
         try{
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
 
@@ -265,7 +265,7 @@ public class TestViewer : MonoBehaviour {
     }
 
     // NFTs
-    private async UniTask<bool> TestERC721Calls() {
+    private async Task<bool> TestERC721Calls() {
         try {
             
             Debug.Log("TEST NFT (BoredApeYachtClub)");
@@ -285,7 +285,7 @@ public class TestViewer : MonoBehaviour {
         return true;
     }
 
-    private async UniTask<bool> LoadOwnerNFTS(string _nftContract, string _nftOwner) {
+    private async Task<bool> LoadOwnerNFTS(string _nftContract, string _nftOwner) {
         ERC721 _nft = new ERC721(_nftContract, ChainId.ETH_MAINNET);
         await _nft.Load();
         Debug.Log("\tname: "+_nft.Name);

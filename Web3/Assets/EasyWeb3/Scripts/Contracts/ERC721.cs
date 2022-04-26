@@ -1,7 +1,7 @@
 using System;
 using System.Numerics;
 using System.Collections.Generic;
-using UniRx.Async;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace EasyWeb3 {
@@ -35,32 +35,32 @@ namespace EasyWeb3 {
         public ERC721(string _contract, ChainId _i) : base(_contract,_i) {}
         public ERC721(string _contract) : base(_contract,ChainId.ETH_ROPSTEN) {}
 
-        public async UniTask<bool> Load() {
+        public async Task<bool> Load() {
             await GetTotalSupply(); //
             await GetName(); //
             await GetSymbol(); //
             return true;
         }
 
-        public async UniTask<BigInteger> GetTotalSupply() {
+        public async Task<BigInteger> GetTotalSupply() {
             var _out = await CallFunction("totalSupply()", new string[]{"uint"});
             TotalSupply = (BigInteger)_out[0];
             return TotalSupply;
         }
 
-        public async UniTask<BigInteger> GetDecimals() {
+        public async Task<BigInteger> GetDecimals() {
             var _out = await CallFunction("decimals()", new string[]{"uint"});
             Decimals = (BigInteger)_out[0];
             return Decimals;
         }
 
-        public async UniTask<string> GetName() {
+        public async Task<string> GetName() {
             var _out = await CallFunction("name()", new string[]{"string"});
             Name = (string)_out[0];
             return Name;
         }
 
-        public async UniTask<string> GetSymbol() {
+        public async Task<string> GetSymbol() {
             var _out = await CallFunction("symbol()", new string[]{"string"});
             Symbol = (string)_out[0];
             return Symbol;
@@ -69,22 +69,22 @@ namespace EasyWeb3 {
         /// <summary>
         /// Returns a count of NFTs assigned to an address
         /// </summary>
-        public async UniTask<BigInteger> GetBalanceOf(string _owner) {
+        public async Task<BigInteger> GetBalanceOf(string _owner) {
             var _out = await CallFunction("balanceOf(address)", new string[]{"uint"}, new string[]{_owner});
             return (BigInteger)_out[0];
         }
 
-        public async UniTask<BigInteger> GetTokenOfOwnerByIndex(string _owner, int _index) {
+        public async Task<BigInteger> GetTokenOfOwnerByIndex(string _owner, int _index) {
             var _out = await CallFunction("tokenOfOwnerByIndex(address,uint256)", new string[]{"uint"}, new string[]{_owner,_index.ToString()});
             return (BigInteger)_out[0];
         }
         
-        public async UniTask<string> GetToken(int _tokenId) {
+        public async Task<string> GetToken(int _tokenId) {
             var _out = await CallFunction("tokenURI(uint256)", new string[]{"string"}, new string[]{_tokenId.ToString()});
             return (string)_out[0];
         }
 
-        public async UniTask<List<NFT>> GetOwnerNFTs(string _owner, NFTSuccessDelegate _onProgress=null, NFTFailDelegate _onFail=null) {
+        public async Task<List<NFT>> GetOwnerNFTs(string _owner, NFTSuccessDelegate _onProgress=null, NFTFailDelegate _onFail=null) {
             List<NFT> _nfts = new List<NFT>();
             BigInteger _bal = await GetBalanceOf(_owner);
             for (int i = 0; i < _bal; i++) {
