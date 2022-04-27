@@ -21,7 +21,7 @@ public class ScanViewer : MonoBehaviour
     }
 
     private void StartScan() {
-        Contract _uniswapv2 = new Contract("0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D", m_ChainId);
+        Contract _uniswapv2 = new Contract(Constants.ADDR_UNISWAPV2, m_ChainId);
         StartCoroutine(Scan(_uniswapv2));
     }
 
@@ -105,7 +105,7 @@ public class ScanViewer : MonoBehaviour
                             Feed.text += "\n\tLiquidity was just added to "+_symbol;
                             break;
                         case 10: //removeLiquidityETHWithPermit
-                            _inputs = _tx.GetInputs(new string[]{"address","uint","uint","uint","address","uint","bool","uint","bytes","bytes"});
+                            _inputs = _tx.GetInputs(new string[]{"address","uint","uint","uint","address","uint","bool","uint","simplebytes","simplebytes"});
                             _token = (string)_inputs[0]; // token (address) is the 1st input
                             _symbol = await (new ERC20(_token, m_ChainId)).GetName();
                             Feed.text += "\n\tLiquidity was just removed from "+_symbol;
@@ -121,6 +121,7 @@ public class ScanViewer : MonoBehaviour
     }
 }
 /*
+removeLiquidityETHWithPermit
 0000000000000000000000002f4697762178f511eaf2517e6dc47ccf6b30faa9
 0000000000000000000000000000000000000000000000f26f5a94ae2a3e374a
 0000000000000000000000000000000000000000002681589ba33dc6b1c02c3e
@@ -129,6 +130,6 @@ public class ScanViewer : MonoBehaviour
 0000000000000000000000000000000000000000000000000000000062670480
 0000000000000000000000000000000000000000000000000000000000000000
 000000000000000000000000000000000000000000000000000000000000001b
-3c689d9fc81d04f8d363783616bcc31c5a75e78ee653497dd3c44ffdd4f1337b
-3ecd99b88a3ee69e4fd181cb071ccf7db12f457579a231134d616dd72cefc973
+3c689d9fc81d04f8d363783616bcc31c5a75e78ee653497dd3c44ffdd4f1337b (simplebytes) non-dynamic
+3ecd99b88a3ee69e4fd181cb071ccf7db12f457579a231134d616dd72cefc973 (simplebytes) non-dynamic
 */

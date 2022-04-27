@@ -1,10 +1,4 @@
-/*
- Looking around? Ask for help. We will respond. 
- 
- Email: realbrogames@gmail.com
 
- Consider donating to help keep our nodes running for game devs. 0x1011f61Df0E2Ad67e269f4108098c79e71868E00
-*/
 using System;
 using System.Text;
 using System.Numerics;
@@ -37,6 +31,7 @@ namespace EasyWeb3 {
     public class Web3ify {
         protected Web3 m_Web3;
         protected ChainId m_ChainId;
+        protected BigInteger m_LastScannedBlock;
         public ChainId chainId {
             get { return m_ChainId; }
             set {
@@ -51,6 +46,44 @@ namespace EasyWeb3 {
         public async Task<BigInteger> GetChainId() {
             HexBigInteger _hex = await m_Web3.Eth.ChainId.SendRequestAsync();
             return _hex.Value;
+        }
+        public async Task<Nethereum.RPC.Eth.DTOs.Transaction> GetTransaction(string _hash) {
+            try {
+                return await m_Web3.Eth.Transactions.GetTransactionByHash.SendRequestAsync(_hash);
+            } catch (System.Exception) {
+                return null;
+            }
+        }
+        public async Task<Nethereum.RPC.Eth.DTOs.TransactionReceipt> GetTransactionReceipt(string _hash) {
+            try {
+                return await m_Web3.Eth.Transactions.GetTransactionReceipt.SendRequestAsync(_hash);
+            } catch (System.Exception) {
+                return null;
+            }
+        }
+        public async Task<HexBigInteger> GetBlockNumber() {
+            return await m_Web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
+        }
+        public async Task<Nethereum.RPC.Eth.DTOs.BlockWithTransactions> GetTransactionsOnBlock(HexBigInteger _blockNum) {
+            return await m_Web3.Eth.Blocks.GetBlockWithTransactionsByNumber.SendRequestAsync(_blockNum);
+        }
+        public async Task<List<Nethereum.RPC.Eth.DTOs.Transaction>> ScanAll(TransactionScanDelegate _onScanComplete=null) {
+            List<Nethereum.RPC.Eth.DTOs.Transaction> _ret = new List<Nethereum.RPC.Eth.DTOs.Transaction>();
+            HexBigInteger _blockNum = await GetBlockNumber();
+            if (_blockNum <= m_LastScannedBlock && m_LastScannedBlock != 0) {
+                if (_onScanComplete != null)
+                    _onScanComplete(_ret, _blockNum, false);
+                return _ret;
+            }
+            m_LastScannedBlock = _blockNum;
+            // Log("[Scan] Scanning Block "+_blockNum);
+            var _result = await GetTransactionsOnBlock(_blockNum);
+            foreach(Nethereum.RPC.Eth.DTOs.Transaction _tx in _result.Transactions) {
+                _ret.Add(_tx);
+            }
+            if (_onScanComplete != null)
+                _onScanComplete(_ret, _blockNum, true);
+            return _ret;
         }
         protected void Log(string _msg) {
             if (!Constants.debug) return;
@@ -212,6 +245,7 @@ namespace EasyWeb3 {
                         AddHistory(ref _history, _ptr, 64*_boolarr.Length+64);
                         _cursor += 64;
                         break;
+                    case "bytes":
                     case "string": // dynamic
                         _ptr = GetPointerOrLength(_hex, _cursor) * 2;
                         _arrlen = GetPointerOrLength(_hex, (int)_ptr);
@@ -240,7 +274,7 @@ namespace EasyWeb3 {
                         AddHistory(ref _history, _ptr, _historylen);
                         _cursor += 64;
                         break;
-                    case "bytes":
+                    case "simplebytes":
                     case "address":
                         _data = _hex.Substring(_cursor,64);
                         _ret.Add(Web3Utils.HexAddressToString(_data));
@@ -333,7 +367,6 @@ namespace EasyWeb3 {
         public string Name {get;protected set;}
         public string Symbol {get;protected set;}
         public string Owner {get;protected set;}
-        private BigInteger m_LastScannedBlock;
         public Contract(string _contract, ChainId _i) : base(_i) {
             m_Contract = _contract;
         }
@@ -350,7 +383,7 @@ namespace EasyWeb3 {
                 _inputs: ["0xbd0dbb9fddc73b6ebffc7c09cfae1b19d6dece40"]
             Outputs:
                 ["0"]
-            All Examples at /!!TODO
+            All Examples at /Assets/EasyWeb3/Scripts/Web3Components/UI/TestViewer.cs
          */
         public async Task<List<object>> CallFunction(string _signature, string[] _outputs, string[] _inputs=null) {
             List<object> _ret = new List<object>();
@@ -390,7 +423,7 @@ namespace EasyWeb3 {
 
         public async Task<List<Nethereum.RPC.Eth.DTOs.Transaction>> Scan(TransactionScanDelegate _onScanComplete=null) {
             List<Nethereum.RPC.Eth.DTOs.Transaction> _ret = new List<Nethereum.RPC.Eth.DTOs.Transaction>();
-            HexBigInteger _blockNum = await m_Web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
+            HexBigInteger _blockNum = await GetBlockNumber();
             if (_blockNum <= m_LastScannedBlock && m_LastScannedBlock != 0) {
                 if (_onScanComplete != null)
                     _onScanComplete(_ret, _blockNum, false);
@@ -398,30 +431,11 @@ namespace EasyWeb3 {
             }
             m_LastScannedBlock = _blockNum;
             // Log("[Scan] Scanning Block "+_blockNum);
-            var _result = await m_Web3.Eth.Blocks.GetBlockWithTransactionsByNumber.SendRequestAsync((HexBigInteger)_blockNum);
+            var _result = await GetTransactionsOnBlock(_blockNum);
             foreach(Nethereum.RPC.Eth.DTOs.Transaction _tx in _result.Transactions) {
                 if (_tx.To.ToLower() == m_Contract.ToLower()) {
                     _ret.Add(_tx);
                 }
-            }
-            if (_onScanComplete != null)
-                _onScanComplete(_ret, _blockNum, true);
-            return _ret;
-        }
-
-        public async Task<List<Nethereum.RPC.Eth.DTOs.Transaction>> ScanAll(TransactionScanDelegate _onScanComplete=null) {
-            List<Nethereum.RPC.Eth.DTOs.Transaction> _ret = new List<Nethereum.RPC.Eth.DTOs.Transaction>();
-            HexBigInteger _blockNum = await m_Web3.Eth.Blocks.GetBlockNumber.SendRequestAsync();
-            if (_blockNum <= m_LastScannedBlock && m_LastScannedBlock != 0) {
-                if (_onScanComplete != null)
-                    _onScanComplete(_ret, _blockNum, false);
-                return _ret;
-            }
-            m_LastScannedBlock = _blockNum;
-            // Log("[Scan] Scanning Block "+_blockNum);
-            var _result = await m_Web3.Eth.Blocks.GetBlockWithTransactionsByNumber.SendRequestAsync((HexBigInteger)_blockNum);
-            foreach(Nethereum.RPC.Eth.DTOs.Transaction _tx in _result.Transactions) {
-                _ret.Add(_tx);
             }
             if (_onScanComplete != null)
                 _onScanComplete(_ret, _blockNum, true);

@@ -21,9 +21,9 @@ public class ChainViewer : MonoBehaviour
     }
 
     private IEnumerator Scan() {
-        Contract _contract = new Contract(Constants.ADDR_DEAD, chainId);
+        var _web3 = new Web3ify(chainId);
         while (true) {
-            _contract.ScanAll(async (_txs, _blockNum, _isNew)=>{
+            _web3.ScanAll(async (_txs, _blockNum, _isNew)=>{
                 if (_isNew) {
                     Feed.text += "\nLatest block "+_blockNum+"\n\tTransactions: "+_txs.Count;
                     Scroller.verticalScrollbar.value = 0;

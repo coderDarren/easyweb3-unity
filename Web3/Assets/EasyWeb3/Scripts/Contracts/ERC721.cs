@@ -94,6 +94,7 @@ namespace EasyWeb3 {
                     string _uri = await GetToken((int)_token);
                     string _requrl = _uri.Contains("ipfs://") ? _uri.Replace("ipfs://","https://ipfs.io/ipfs/") : _uri;
                     string _json = await RestService.GetService().Get(_requrl);
+                    UnityEngine.Debug.Log(_json);
                     NFTData _data = JsonConvert.DeserializeObject<NFTData>(_json);
                     NFT _nft = new NFT((int)_token, _uri, _data);
                     _nfts.Add(_nft);

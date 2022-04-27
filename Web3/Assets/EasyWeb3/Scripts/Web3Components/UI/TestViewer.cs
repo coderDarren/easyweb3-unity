@@ -14,7 +14,7 @@ public class TestViewer : MonoBehaviour {
 
     public Text Feed;
 
-    private string EasyWeb3UnitTestContract = "0x0F6F756e309C451558FCf1F7A66aEf0D553A6e86";
+    private string EasyWeb3UnitTestContract = "0x70396512216dbf32C42EB798C51a9616FdDb683a";
 
     private void Start() {
         Load();
@@ -31,6 +31,7 @@ public class TestViewer : MonoBehaviour {
         await TestArrayCalls();
         await TestComplexCalls();
         await TestERC721Calls();
+        await TestCustomContractCalls();
     }
     
     private void Pass(string _type) {
@@ -44,7 +45,6 @@ public class TestViewer : MonoBehaviour {
     // Tokens
     private async Task<bool> TestERC20Calls() {
         try {
-            // ERC20 _token = new ERC20("0x1A2933fbA0c6e959c9A2D2c933f3f8AD4aa9f06e", ChainId.ETH_MAINNET);
             ERC20 _token = new ERC20(EasyWeb3UnitTestContract);
             // method 1
             Debug.Log("\nMethod 1 ERC20 Data Extraction");
@@ -193,9 +193,11 @@ public class TestViewer : MonoBehaviour {
             Debug.Log("\t_int: "+_int);
 
             Debug.Log("TEST: getComplex2(string[],uint256[],bool[])");
-            _out = await _token.CallFunction("getComplex2(string[],uint256[],bool[])", 
-                new string[]{"struct(uint,string,bool,address)","uint[]","string"}, 
-                new string[]{"string[](str1,str2)","uint[](1,2,3)","bool[](1,0,1,0)"});
+            _out = await _token.CallFunction(
+                "getComplex2(string[],uint256[],bool[])", // the function signature, without input var names
+                new string[]{"struct(uint,string,bool,address)","uint[]","string"}, // the output types
+                new string[]{"string[](str1,str2)","uint[](1,2,3)","bool[](1,0,1,0)"} // the input values
+            );
             _structint = (BigInteger)_out[0];
             _structstring = (string)_out[1];
             _structbool = (bool)_out[2];
@@ -299,6 +301,26 @@ public class TestViewer : MonoBehaviour {
             (_nftId, _error) => { // called when an nft fails to load
                 Debug.LogWarning("\tFailed to load tokenId "+_nftId+": "+_error);
             });
+        return true;
+    }
+
+    private async Task<bool> TestCustomContractCalls() {
+        try {
+            
+            Debug.Log("TEST Custom Contract Calls");
+            Contract _cronos = new Contract("0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b", ChainId.ETH_MAINNET);
+            var _out = await _cronos.CallFunction("getUpgradeState()", new string[]{"uint"});
+            Debug.Log("\tCRONOS upgrade state: "+(BigInteger)_out[0]);
+            _out = await _cronos.CallFunction("canUpgrade()", new string[]{"bool"});
+            Debug.Log("\tCRONOS upgradeable: "+(bool)_out[0]);
+            _out = await _cronos.CallFunction("airdropReserveWallet()", new string[]{"address"});
+            Debug.Log("\tCRONOS airdrop reserve wallet: "+(string)_out[0]);
+            Pass("Custom Contract Calls");
+        } catch (System.Exception _e) {
+            Debug.LogWarning("[TestCustomContractCalls] Tests Failed: "+_e);
+            Fail("Custom Contract Calls");
+            return false;
+        }
         return true;
     }
 }
