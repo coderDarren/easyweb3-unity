@@ -48,12 +48,6 @@ namespace EasyWeb3 {
             return TotalSupply;
         }
 
-        public async Task<BigInteger> GetDecimals() {
-            var _out = await CallFunction("decimals()", new string[]{"uint"});
-            Decimals = (BigInteger)_out[0];
-            return Decimals;
-        }
-
         public async Task<string> GetName() {
             var _out = await CallFunction("name()", new string[]{"string"});
             Name = (string)_out[0];
@@ -79,9 +73,33 @@ namespace EasyWeb3 {
             return (BigInteger)_out[0];
         }
         
+        /// <summary>
+        /// Returns URI to access NFT metadata for _tokenId
+        /// </summary>
         public async Task<string> GetToken(int _tokenId) {
             var _out = await CallFunction("tokenURI(uint256)", new string[]{"string"}, new string[]{_tokenId.ToString()});
             return (string)_out[0];
+        }
+
+        public async Task<string> GetOwnerOf(int _tokenId) {
+            var _out = await CallFunction("ownerOf(uint256)", new string[]{"string"}, new string[]{_tokenId.ToString()});
+            return (string)_out[0];
+        }
+
+        /// <summary>
+        /// Return who can sell _tokenId
+        /// </summary>
+        public async Task<string> GetApproved(int _tokenId) {
+            var _out = await CallFunction("getApproved(uint256)", new string[]{"string"}, new string[]{_tokenId.ToString()});
+            return (string)_out[0];
+        }
+
+        /// <summary>
+        /// Return true if _operator can sell all tokenIds of _owner
+        /// </summary>
+        public async Task<bool> IsApprovedForAll(string _owner, string _operator) {
+            var _out = await CallFunction("isApprovedForAll(address,address)", new string[]{"bool"}, new string[]{_owner, _operator});
+            return (bool)_out[0];
         }
 
         public async Task<List<NFT>> GetOwnerNFTs(string _owner, NFTSuccessDelegate _onProgress=null, NFTFailDelegate _onFail=null) {
@@ -94,7 +112,6 @@ namespace EasyWeb3 {
                     string _uri = await GetToken((int)_token);
                     string _requrl = _uri.Contains("ipfs://") ? _uri.Replace("ipfs://","https://ipfs.io/ipfs/") : _uri;
                     string _json = await RestService.GetService().Get(_requrl);
-                    UnityEngine.Debug.Log(_json);
                     NFTData _data = JsonConvert.DeserializeObject<NFTData>(_json);
                     NFT _nft = new NFT((int)_token, _uri, _data);
                     _nfts.Add(_nft);
@@ -110,29 +127,5 @@ namespace EasyWeb3 {
             return _nfts;
         }
 
-        // function ownerOf(uint256 _tokenId) external view returns (address);
-        // function getApproved(uint256 _tokenId) external view returns (address); (return who can sell this tokenId)
-        // function isApprovedForAll(address _owner, address _operator) external view returns (bool); (can _operator sell all tokenIds)
-
-        /* NFT Metadata
-        {
-            "title": "Asset Metadata",
-            "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Identifies the asset to which this NFT represents"
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Describes the asset to which this NFT represents"
-                },
-                "image": {
-                    "type": "string",
-                    "description": "A URI pointing to a resource with mime type image/* representing the asset to which this NFT represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive."
-                }
-            }
-        }
-        */
     }
 }

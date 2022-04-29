@@ -8435,6 +8435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransactionProgressVerifier
       objectReference: {fileID: 0}
+    - target: {fileID: 1671265874620308758, guid: dbfc414437bc3c14b9606c5f46f88d03, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1671265874620308776, guid: dbfc414437bc3c14b9606c5f46f88d03, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -8535,6 +8539,10 @@ PrefabInstance:
     - target: {fileID: 7868969441365995192, guid: 37c2d2615d0f9f94fa61f7864b271df2, type: 3}
       propertyPath: m_Name
       value: TriggerNFTLoader (Bored Ape Yacht Club) ETH
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868969441365995192, guid: 37c2d2615d0f9f94fa61f7864b271df2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37c2d2615d0f9f94fa61f7864b271df2, type: 3}

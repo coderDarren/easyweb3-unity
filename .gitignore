@@ -2,4 +2,6 @@ Web3/Library
 Web3/Temp
 Web3/builds
 *.csproj
-*.sln
+*.vs
+easyweb3libs/easyweb3libs/bin
+easyweb3libs/easyweb3libs/obj

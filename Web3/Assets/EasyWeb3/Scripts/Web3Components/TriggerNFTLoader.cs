@@ -109,24 +109,6 @@ public class TriggerNFTLoader : MonoBehaviour {
         return true;
     }
 
-    private IEnumerator LoadAllNFTs(Web3Player _player) {
-        yield return null;
-        LoadOwnerNFTS(NFTContract, _player.GetAddressFromChain(Web3Chain));
-    }
-
-    private IEnumerator CycleTextures() {
-        while (true) {
-            if (m_NFTs.Count == 0) {}
-            else {
-                m_NFTCycleIndex++;
-                m_NFTCycleIndex = m_NFTCycleIndex > m_NFTs.Count - 1 ? 0 : m_NFTCycleIndex;
-                NFT _nft = m_NFTs[m_NFTCycleIndex];
-                DrawNFTData(_nft);
-            }
-            yield return new WaitForSeconds(3);
-        }
-    }
-
     private async Task<bool> LoadTexture(NFT _nft) {
         Debug.Log("\t[TriggerNFTLoader] Loaded NFT: "+_nft.Data.image);
         string _url = _nft.Data.image.Contains("ipfs://") ? _nft.Data.image.Replace("ipfs://","https://ipfs.io/ipfs/") : _nft.Data.image;
@@ -143,5 +125,23 @@ public class TriggerNFTLoader : MonoBehaviour {
             }
         }
         return true;
+    }
+
+    private IEnumerator LoadAllNFTs(Web3Player _player) {
+        yield return null;
+        LoadOwnerNFTS(NFTContract, _player.GetAddressFromChain(Web3Chain));
+    }
+
+    private IEnumerator CycleTextures() {
+        while (true) {
+            if (m_NFTs.Count == 0) {}
+            else {
+                m_NFTCycleIndex++;
+                m_NFTCycleIndex = m_NFTCycleIndex > m_NFTs.Count - 1 ? 0 : m_NFTCycleIndex;
+                NFT _nft = m_NFTs[m_NFTCycleIndex];
+                DrawNFTData(_nft);
+            }
+            yield return new WaitForSeconds(3);
+        }
     }
 }

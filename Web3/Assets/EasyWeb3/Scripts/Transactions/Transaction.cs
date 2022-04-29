@@ -6,7 +6,10 @@ namespace EasyWeb3 {
 
         public string MethodId {
             get {
-                return m_Tx.Input.Substring(0,10);
+                if (m_Tx.Input.Length >= 10)
+                    return m_Tx.Input.Substring(0,10);
+                else
+                    return "0x";
             }
         }
 

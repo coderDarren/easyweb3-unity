@@ -27,11 +27,11 @@ public class ScanViewer : MonoBehaviour
 
     private IEnumerator Scan(Contract _contract) {
         while (true) {
-            _contract.Scan(async (_txs, _blockNum, _isNew)=>{
+            _contract.Scan((_txs, _blockNum, _isNew)=>{
                 if (_isNew) {
                     Feed.text += "\nScanning block "+_blockNum+" ("+_txs.Count+")";
+                    ProcessTransactions(_txs);
                 }
-                ProcessTransactions(_txs);
             });
             Scroller.verticalScrollbar.value = 0;
             yield return new WaitForSeconds(3);
