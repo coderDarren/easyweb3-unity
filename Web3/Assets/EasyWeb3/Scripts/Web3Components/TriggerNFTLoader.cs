@@ -31,6 +31,7 @@ public class TriggerNFTLoader : MonoBehaviour {
     private bool m_IsLoading;
     private List<NFT> m_NFTs;
     private int m_NFTCycleIndex;
+    private Hashtable m_NFTTextures;
 
     private void Start() {
         m_NftContract = new ERC721(NFTContract, Web3Chain);
@@ -40,6 +41,7 @@ public class TriggerNFTLoader : MonoBehaviour {
     }
 
     private void OnDisable() {
+        m_NftContract.Dispose(); // !important, Stops any asynchronous loading
         StopAllCoroutines();
     }
 
@@ -52,17 +54,18 @@ public class TriggerNFTLoader : MonoBehaviour {
     }
 
     private void DrawNFTData(NFT _nft) {
-        if (_nft.AssetUrl.Contains("mp4")) {
+        string _url = _nft.Data.image.Contains("ipfs://") ? _nft.Data.image.Replace("ipfs://","https://ipfs.io/ipfs/") : _nft.Data.image;
+        if (_url.Contains("mp4")) {
             Img.gameObject.SetActive(false);
             Video.gameObject.SetActive(true);
             Video.url = _nft.Data.image;
             Video.Play();
-        } else if (_nft.AssetUrl.ToLower().Contains(".png") || _nft.AssetUrl.ToLower().Contains(".jpg") || _nft.AssetUrl.ToLower().Contains(".jpeg") || _nft.AssetUrl.ToLower().Contains("https://ipfs.io/ipfs/")) {
+        } else if (_url.ToLower().Contains(".png") || _url.ToLower().Contains(".jpg") || _url.ToLower().Contains(".jpeg") || _url.ToLower().Contains("https://ipfs.io/ipfs/")) {
             Img.gameObject.SetActive(true);
             Video.gameObject.SetActive(false);
-            Img.texture = _nft.texture;
+            Img.texture = (Texture2D)m_NFTTextures[_nft.Id];
         } else {
-            Debug.LogWarning("Unsupported NFT url: "+_nft.AssetUrl+". Contact support if you need help supporting this.");
+            Debug.LogWarning("Unsupported NFT url: "+_url+". Contact support if you need help supporting this.");
         }
         Title.text = _nft.Data.name != null ? _nft.Data.name : 
                     _nft.Data.title != null ? _nft.Data.title : "No Title Available";
@@ -86,6 +89,7 @@ public class TriggerNFTLoader : MonoBehaviour {
             Symbol.text = m_NftContract.Symbol;
             Supply.text = "Supply: "+m_NftContract.ValueFromDecimals(m_NftContract.TotalSupply).ToString();
             m_DidLoadContract = true;
+            m_NFTTextures = new Hashtable();
         }
     }
 
@@ -112,13 +116,12 @@ public class TriggerNFTLoader : MonoBehaviour {
     private async Task<bool> LoadTexture(NFT _nft) {
         Debug.Log("\t[TriggerNFTLoader] Loaded NFT: "+_nft.Data.image);
         string _url = _nft.Data.image.Contains("ipfs://") ? _nft.Data.image.Replace("ipfs://","https://ipfs.io/ipfs/") : _nft.Data.image;
-        _nft.AssetUrl = _url;
         if (_url.Contains("mp4")) {
         } else {
             UnityWebRequest _req = UnityWebRequestTexture.GetTexture(_url);
             await _req.SendWebRequest();
             Texture2D _tex = ((DownloadHandlerTexture)_req.downloadHandler).texture;
-            _nft.texture = _tex;
+            m_NFTTextures.Add(_nft.Id, _tex);
             m_NFTs.Add(_nft);
             if (m_NFTs.Count == 1) {
                 DrawNFTData(_nft);
