@@ -288,13 +288,13 @@ public class TestViewer : MonoBehaviour {
     }
 
     private async Task<bool> LoadOwnerNFTS(string _nftContract, string _nftOwner) {
-        ERC721 _nft = new ERC721(_nftContract, ChainId.ETH_MAINNET);
-        await _nft.Load();
-        Debug.Log("\tname: "+_nft.Name);
-        Debug.Log("\tsymbol: "+_nft.Symbol);
-        Debug.Log("\ttotal supply: "+_nft.ValueFromDecimals(_nft.TotalSupply));
+        ERC721 _contract = new ERC721(_nftContract, ChainId.ETH_MAINNET);
+        await _contract.Load();
+        Debug.Log("\tname: "+_contract.Name);
+        Debug.Log("\tsymbol: "+_contract.Symbol);
+        Debug.Log("\ttotal supply: "+_contract.ValueFromDecimals(_contract.TotalSupply));
         Debug.Log("Getting NFTs from an owner...");
-        List<NFT> _nfts = await _nft.GetOwnerNFTs(_nftOwner,
+        List<NFT> _nfts = await _contract.GetOwnerNFTs(_nftOwner,
             (_nft,_progress) => { // called when an nft is found
                 Debug.Log("\t"+(_progress*100)+"% | Loaded NFT: "+_nft.Data.image);
             },
