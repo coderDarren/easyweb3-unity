@@ -8,6 +8,13 @@ namespace EasyWeb3
 {
     public class Web3ify
     {
+        public static string OVERLOADED_ETH_MAINNET_NODE_URL = "";
+        public static string OVERLOADED_ETH_ROPSTEN_NODE_URL = "";
+        public static string OVERLOADED_BSC_MAINNET_NODE_URL = "";
+        public static string OVERLOADED_BSC_TESTNET_NODE_URL = "";
+        public static string OVERLOADED_MATIC_MAINNET_NODE_URL = "";
+        public static string OVERLOADED_MATIC_TESTNET_NODE_URL = "";
+
         protected Web3 m_Web3;
         protected ChainId m_ChainId;
         protected BigInteger m_LastScannedBlock;
@@ -24,6 +31,10 @@ namespace EasyWeb3
         {
             m_ChainId = _i;
             m_Web3 = new Web3(GetNodeURL(m_ChainId));
+        }
+        public Web3ify(string _node)
+        {
+            m_Web3 = new Web3(_node);
         }
         public async Task<BigInteger> GetChainId()
         {
@@ -86,17 +97,17 @@ namespace EasyWeb3
             switch (_chainId)
             {
                 case ChainId.ETH_ROPSTEN:
-                    return Constants.NODE_ETH_ROPSTEN;
+                    return OVERLOADED_ETH_ROPSTEN_NODE_URL != "" ? OVERLOADED_ETH_ROPSTEN_NODE_URL : Constants.NODE_ETH_ROPSTEN;
                 case ChainId.ETH_MAINNET:
-                    return Constants.NODE_ETH_MAINNET;
+                    return OVERLOADED_ETH_MAINNET_NODE_URL != "" ? OVERLOADED_ETH_MAINNET_NODE_URL : Constants.NODE_ETH_MAINNET;
                 case ChainId.BSC_TESTNET:
-                    return Constants.NODE_BSC_TESTNET;
+                    return OVERLOADED_BSC_TESTNET_NODE_URL != "" ? OVERLOADED_BSC_TESTNET_NODE_URL : Constants.NODE_BSC_TESTNET;
                 case ChainId.BSC_MAINNET:
-                    return Constants.NODE_BSC_MAINNET;
+                    return OVERLOADED_BSC_MAINNET_NODE_URL != "" ? OVERLOADED_BSC_MAINNET_NODE_URL : Constants.NODE_BSC_MAINNET;
                 case ChainId.MATIC_TESTNET:
-                    return Constants.NODE_MATIC_TESTNET;
+                    return OVERLOADED_MATIC_TESTNET_NODE_URL != "" ? OVERLOADED_MATIC_TESTNET_NODE_URL : Constants.NODE_MATIC_TESTNET;
                 case ChainId.MATIC_MAINNET:
-                    return Constants.NODE_MATIC_MAINNET;
+                    return OVERLOADED_MATIC_MAINNET_NODE_URL != "" ? OVERLOADED_MATIC_MAINNET_NODE_URL : Constants.NODE_MATIC_MAINNET;
             }
             return Constants.NODE_ETH_ROPSTEN;
         }

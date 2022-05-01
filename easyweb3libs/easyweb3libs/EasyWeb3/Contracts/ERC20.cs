@@ -6,7 +6,7 @@ namespace EasyWeb3
 {
     public class ERC20 : Contract
     {
-
+        public ERC20(string _contract, string _node) : base(_contract, _node) { }
         public ERC20(string _contract, ChainId _i) : base(_contract, _i) { }
         public ERC20(string _contract) : base(_contract, ChainId.ETH_ROPSTEN) { }
 

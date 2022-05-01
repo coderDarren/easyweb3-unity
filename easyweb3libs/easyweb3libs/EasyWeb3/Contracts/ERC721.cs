@@ -37,6 +37,7 @@ namespace EasyWeb3
     {
         private bool m_ApplicationIsRunning=true;
 
+        public ERC721(string _contract, string _node) : base(_contract, _node) { }
         public ERC721(string _contract, ChainId _i) : base(_contract, _i) { }
         public ERC721(string _contract) : base(_contract, ChainId.ETH_ROPSTEN) { }
 

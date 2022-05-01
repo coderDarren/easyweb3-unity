@@ -19,6 +19,10 @@ namespace EasyWeb3
         {
             m_Contract = _contract;
         }
+        public Contract(string _contract, string _node) : base(_node)
+        {
+            m_Contract = _contract;
+        }
         // slight loss of precision
         public double ValueFromDecimals(BigInteger _value)
         {
