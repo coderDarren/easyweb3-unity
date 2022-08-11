@@ -1,5 +1,7 @@
 # easyweb3-unity
 
+![alt text](https://github.com/coderDarren/easyweb3-unity/blob/main/thumb.jpg?raw=true)
+
 ### PREFACE
 
 This package was primed for the Unity Asset Store, but Unity mentioned to me that they want nothing to do with Web3 from their creators; and have since removed similar projects from their store.
