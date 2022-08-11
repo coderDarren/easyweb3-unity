@@ -92,7 +92,7 @@ namespace EasyWeb3
                 _onScanComplete(_ret, _blockNum, true);
             return _ret;
         }
-        protected string GetNodeURL(ChainId _chainId)
+        public string GetNodeURL(ChainId _chainId)
         {
             switch (_chainId)
             {

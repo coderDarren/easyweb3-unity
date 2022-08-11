@@ -15,7 +15,7 @@ C:/Users/donea/Documents/github/easyweb3-unity/Web3
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52293
+65363
 Successfully changed project path to: C:/Users/donea/Documents/github/easyweb3-unity/Web3
 C:/Users/donea/Documents/github/easyweb3-unity/Web3
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/donea/Documents/github/easyweb3-unity/Web3
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 125.39 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 114.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.0f1 (6eacc8284459)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -63,93 +63,93 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56064
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006787 seconds.
+Registered in 0.006808 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 120.12 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 111.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.586 seconds
+- Completed reload, in  0.537 seconds
 Domain Reload Profiling:
-	ReloadAssembly (587ms)
-		BeginReloadAssembly (58ms)
+	ReloadAssembly (537ms)
+		BeginReloadAssembly (57ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (430ms)
-			LoadAssemblies (56ms)
+		EndReloadAssembly (395ms)
+			LoadAssemblies (55ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (83ms)
+			SetupTypeCache (74ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (21ms)
-			SetupLoadedEditorAssemblies (282ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (259ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (120ms)
+				RefreshPlugins (112ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (116ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
+				ProcessInitializeOnLoadAttributes (105ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014711 seconds.
+Registered in 0.016612 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 122.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 141.82 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.491 seconds
+- Completed reload, in  1.928 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1491ms)
-		BeginReloadAssembly (95ms)
+	ReloadAssembly (1928ms)
+		BeginReloadAssembly (93ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1297ms)
-			LoadAssemblies (103ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1741ms)
+			LoadAssemblies (100ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (288ms)
+			SetupTypeCache (335ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (78ms)
-			SetupLoadedEditorAssemblies (786ms)
+			RebuildScriptCaches (96ms)
+			SetupLoadedEditorAssemblies (1147ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (123ms)
-				BeforeProcessingInitializeOnLoad (113ms)
-				ProcessInitializeOnLoadAttributes (336ms)
-				ProcessInitializeOnLoadMethodAttributes (194ms)
-				AfterProcessingInitializeOnLoad (15ms)
-				EditorAssembliesLoaded (1ms)
+				RefreshPlugins (142ms)
+				BeforeProcessingInitializeOnLoad (121ms)
+				ProcessInitializeOnLoadAttributes (425ms)
+				ProcessInitializeOnLoadMethodAttributes (446ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 1.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6890 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 93 unused Assets / (3.8 MB). Loaded Objects now: 7328.
-Memory consumption went from 306.0 MB to 302.2 MB.
-Total: 4.879200 ms (FindLiveObjects: 0.568100 ms CreateObjectMapping: 0.264100 ms MarkObjects: 3.162100 ms  DeleteObjects: 0.884000 ms)
+Unloading 6891 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 94 unused Assets / (3.8 MB). Loaded Objects now: 7328.
+Memory consumption went from 306.1 MB to 302.2 MB.
+Total: 4.515600 ms (FindLiveObjects: 0.529100 ms CreateObjectMapping: 0.211700 ms MarkObjects: 2.994000 ms  DeleteObjects: 0.779900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -164,57 +164,57 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 160865.073077 seconds.
-  path: Assets/EasyWeb3/Prefabs/BlockchainScanner.prefab
-  artifactKey: Guid(467632fd2206fc74386c808242b0b4d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EasyWeb3/Prefabs/BlockchainScanner.prefab using Guid(467632fd2206fc74386c808242b0b4d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6ef92b780a457c918567fe4104d38a9') in 0.047940 seconds 
+  Time since last request: 167378.913185 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84ca895f926959dae8bdf64d924ceeea') in 0.024053 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.012870 seconds.
+Registered in 0.017184 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.211 seconds
+- Completed reload, in  1.192 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1212ms)
-		BeginReloadAssembly (152ms)
+	ReloadAssembly (1192ms)
+		BeginReloadAssembly (181ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (49ms)
-		EndReloadAssembly (954ms)
-			LoadAssemblies (104ms)
+			CreateAndSetChildDomain (72ms)
+		EndReloadAssembly (930ms)
+			LoadAssemblies (99ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (275ms)
+			SetupTypeCache (276ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (458ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (407ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (96ms)
-				ProcessInitializeOnLoadAttributes (307ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.91 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6566 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 72 unused Assets / (3.8 MB). Loaded Objects now: 7343.
-Memory consumption went from 288.5 MB to 284.7 MB.
-Total: 5.667200 ms (FindLiveObjects: 0.598700 ms CreateObjectMapping: 0.294700 ms MarkObjects: 3.717500 ms  DeleteObjects: 1.054900 ms)
+Unloading 6567 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (3.8 MB). Loaded Objects now: 7343.
+Memory consumption went from 288.6 MB to 284.7 MB.
+Total: 4.366100 ms (FindLiveObjects: 0.435000 ms CreateObjectMapping: 0.202400 ms MarkObjects: 2.848300 ms  DeleteObjects: 0.878800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -230,51 +230,174 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.013974 seconds.
+Registered in 0.017362 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.235 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1235ms)
+		BeginReloadAssembly (165ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (989ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (268ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (486ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (346ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6567 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (3.8 MB). Loaded Objects now: 7358.
+Memory consumption went from 288.6 MB to 284.8 MB.
+Total: 4.696600 ms (FindLiveObjects: 0.477500 ms CreateObjectMapping: 0.206200 ms MarkObjects: 2.815300 ms  DeleteObjects: 1.196500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1316.503972 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31bd73bf7ed277ee5039b39429cdd31a') in 0.013551 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014604 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  1.105 seconds
 Domain Reload Profiling:
 	ReloadAssembly (1106ms)
-		BeginReloadAssembly (135ms)
+		BeginReloadAssembly (127ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (883ms)
-			LoadAssemblies (99ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (896ms)
+			LoadAssemblies (95ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (258ms)
+			SetupTypeCache (269ms)
 			ReleaseScriptCaches (2ms)
 			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (395ms)
+			SetupLoadedEditorAssemblies (399ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (267ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (272ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.16 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.01 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6568 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 74 unused Assets / (3.8 MB). Loaded Objects now: 7358.
+Unloading 6567 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (3.8 MB). Loaded Objects now: 7373.
 Memory consumption went from 288.6 MB to 284.8 MB.
-Total: 6.183300 ms (FindLiveObjects: 0.775000 ms CreateObjectMapping: 0.367500 ms MarkObjects: 3.613300 ms  DeleteObjects: 1.426500 ms)
+Total: 5.290600 ms (FindLiveObjects: 0.914200 ms CreateObjectMapping: 0.218300 ms MarkObjects: 3.241100 ms  DeleteObjects: 0.915900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014037 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.172 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1173ms)
+		BeginReloadAssembly (167ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (927ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (271ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (433ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (301ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6567 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (3.8 MB). Loaded Objects now: 7388.
+Memory consumption went from 288.6 MB to 284.8 MB.
+Total: 5.600000 ms (FindLiveObjects: 0.563700 ms CreateObjectMapping: 0.334100 ms MarkObjects: 3.766500 ms  DeleteObjects: 0.933700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -289,57 +412,2425 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1096.991179 seconds.
-  path: Assets/EasyWeb3/Lib/easyweb3libs.pdb
-  artifactKey: Guid(fafd3babf6bd8b54f91ad441dfc549f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EasyWeb3/Lib/easyweb3libs.pdb using Guid(fafd3babf6bd8b54f91ad441dfc549f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3476764922c43e1f58f62f088f0f3bab') in 0.025224 seconds 
+  Time since last request: 520.352130 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18749a5fe55fca44a2dd2f7a3255a99') in 0.015878 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.017191 seconds.
+Registered in 0.010818 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.202 seconds
+- Completed reload, in  1.122 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1202ms)
-		BeginReloadAssembly (185ms)
+	ReloadAssembly (1123ms)
+		BeginReloadAssembly (127ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (56ms)
-		EndReloadAssembly (938ms)
-			LoadAssemblies (131ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (914ms)
+			LoadAssemblies (93ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (266ms)
+			SetupTypeCache (275ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (438ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (407ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6558 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7403.
+Memory consumption went from 288.4 MB to 284.6 MB.
+Total: 4.820000 ms (FindLiveObjects: 0.537200 ms CreateObjectMapping: 0.191600 ms MarkObjects: 3.209500 ms  DeleteObjects: 0.880700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014212 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.192 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1192ms)
+		BeginReloadAssembly (165ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (72ms)
+		EndReloadAssembly (949ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (268ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (447ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (90ms)
-				ProcessInitializeOnLoadAttributes (302ms)
+				ProcessInitializeOnLoadAttributes (311ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6558 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7418.
+Memory consumption went from 288.4 MB to 284.6 MB.
+Total: 5.172700 ms (FindLiveObjects: 0.525800 ms CreateObjectMapping: 0.221100 ms MarkObjects: 3.515700 ms  DeleteObjects: 0.908700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 325.977364 seconds.
+  path: Assets/EasyWeb3/Lib/Newtonsoft.Json.xml
+  artifactKey: Guid(ceb4b53b0af89e8488c87765752c715d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Newtonsoft.Json.xml using Guid(ceb4b53b0af89e8488c87765752c715d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7411d56b0dfcd5088f514859904db0b') in 0.061065 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 869.916691 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f796024b150632818ce50281e7391a') in 0.005093 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011950 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.097 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1098ms)
+		BeginReloadAssembly (125ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (893ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (264ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (405ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (282ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6558 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7433.
+Memory consumption went from 288.5 MB to 284.6 MB.
+Total: 5.211000 ms (FindLiveObjects: 0.572300 ms CreateObjectMapping: 0.202800 ms MarkObjects: 3.470900 ms  DeleteObjects: 0.963800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011022 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.182 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1183ms)
+		BeginReloadAssembly (168ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (936ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (265ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (435ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (298ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6558 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7448.
+Memory consumption went from 288.5 MB to 284.7 MB.
+Total: 5.135300 ms (FindLiveObjects: 0.555600 ms CreateObjectMapping: 0.357800 ms MarkObjects: 3.223800 ms  DeleteObjects: 0.997000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1873.955240 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.ABI.dll
+  artifactKey: Guid(af6f1bb243895114e835f8a999127a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.ABI.dll using Guid(af6f1bb243895114e835f8a999127a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '522ea4f3095d86572af49253096b6523') in 0.337056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.072502 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a126fd2089f7018a8945016cd5a047') in 0.005706 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010766 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.384 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1385ms)
+		BeginReloadAssembly (296ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (135ms)
+		EndReloadAssembly (1000ms)
+			LoadAssemblies (137ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (300ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (432ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (295ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6558 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7463.
+Memory consumption went from 288.5 MB to 284.7 MB.
+Total: 5.532000 ms (FindLiveObjects: 0.548700 ms CreateObjectMapping: 0.206800 ms MarkObjects: 3.743500 ms  DeleteObjects: 1.031600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013714 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.200 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1201ms)
+		BeginReloadAssembly (173ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (943ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (292ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (417ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (287ms)
 				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (11ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.91 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6567 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 73 unused Assets / (3.8 MB). Loaded Objects now: 7373.
+Unloading 6553 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 69 unused Assets / (3.8 MB). Loaded Objects now: 7473.
+Memory consumption went from 288.4 MB to 284.6 MB.
+Total: 5.252500 ms (FindLiveObjects: 0.564100 ms CreateObjectMapping: 0.215100 ms MarkObjects: 3.329100 ms  DeleteObjects: 1.142400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 82.199161 seconds.
+  path: Assets/EasyWeb3/Scripts/Model.cs
+  artifactKey: Guid(6fd3d6da9c61c32499a80ae8cb59b861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Model.cs using Guid(6fd3d6da9c61c32499a80ae8cb59b861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c7fe2f07d0ee6b0e0358801933a06fa') in 0.037439 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011245 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.170 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1170ms)
+		BeginReloadAssembly (171ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (69ms)
+		EndReloadAssembly (919ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (273ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (412ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (85ms)
+				ProcessInitializeOnLoadAttributes (282ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (3.8 MB). Loaded Objects now: 7486.
+Memory consumption went from 288.4 MB to 284.6 MB.
+Total: 5.280500 ms (FindLiveObjects: 0.477200 ms CreateObjectMapping: 0.191200 ms MarkObjects: 3.172600 ms  DeleteObjects: 1.438100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013091 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.203 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1204ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (967ms)
+			LoadAssemblies (123ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (264ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (437ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (307ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7501.
+Memory consumption went from 288.4 MB to 284.6 MB.
+Total: 5.213700 ms (FindLiveObjects: 0.573800 ms CreateObjectMapping: 0.212100 ms MarkObjects: 3.330700 ms  DeleteObjects: 1.096000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010388 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.179 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1180ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (958ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (314ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (402ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7516.
+Memory consumption went from 288.4 MB to 284.6 MB.
+Total: 7.805100 ms (FindLiveObjects: 0.763500 ms CreateObjectMapping: 0.624500 ms MarkObjects: 4.976600 ms  DeleteObjects: 1.438900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011933 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.163 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1164ms)
+		BeginReloadAssembly (159ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (922ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (270ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (417ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (283ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7531.
+Memory consumption went from 288.5 MB to 284.6 MB.
+Total: 5.176100 ms (FindLiveObjects: 0.682100 ms CreateObjectMapping: 0.270800 ms MarkObjects: 3.148600 ms  DeleteObjects: 1.073000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013449 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.200 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1201ms)
+		BeginReloadAssembly (157ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (922ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (428ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (299ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7546.
+Memory consumption went from 288.5 MB to 284.7 MB.
+Total: 4.400300 ms (FindLiveObjects: 0.421500 ms CreateObjectMapping: 0.197200 ms MarkObjects: 2.842200 ms  DeleteObjects: 0.938100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012916 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.417 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1417ms)
+		BeginReloadAssembly (126ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1182ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (289ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (621ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (112ms)
+				ProcessInitializeOnLoadAttributes (440ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7561.
+Memory consumption went from 288.5 MB to 284.7 MB.
+Total: 6.439900 ms (FindLiveObjects: 0.641500 ms CreateObjectMapping: 0.497200 ms MarkObjects: 3.884400 ms  DeleteObjects: 1.415000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 105098.691856 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '592a8f462933ffcace50763772d5fb40') in 0.191435 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011268 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.944 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1947ms)
+		BeginReloadAssembly (416ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (22ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (145ms)
+		EndReloadAssembly (1432ms)
+			LoadAssemblies (186ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (541ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (479ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (334ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7576.
+Memory consumption went from 288.5 MB to 284.7 MB.
+Total: 7.408500 ms (FindLiveObjects: 0.914600 ms CreateObjectMapping: 0.480100 ms MarkObjects: 4.445200 ms  DeleteObjects: 1.566800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 439.793504 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9386e475575cad0661c18d103e5b61e') in 0.021707 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011049 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.190 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1190ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (968ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (303ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (414ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (282ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6551 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7591.
+Memory consumption went from 288.5 MB to 284.7 MB.
+Total: 4.506800 ms (FindLiveObjects: 0.515500 ms CreateObjectMapping: 0.209700 ms MarkObjects: 2.921500 ms  DeleteObjects: 0.859100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 85.817803 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/NodeURLOverloader.cs
+  artifactKey: Guid(379093a191de5574e946b944c429d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/NodeURLOverloader.cs using Guid(379093a191de5574e946b944c429d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e5881a44015a5a074840a70ce0fc8c') in 0.022298 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012818 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.161 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1162ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (942ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (282ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (421ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (285ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6552 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7607.
 Memory consumption went from 288.6 MB to 284.8 MB.
-Total: 5.128500 ms (FindLiveObjects: 0.581100 ms CreateObjectMapping: 0.347500 ms MarkObjects: 3.287200 ms  DeleteObjects: 0.911200 ms)
+Total: 4.468000 ms (FindLiveObjects: 0.500700 ms CreateObjectMapping: 0.212000 ms MarkObjects: 2.854700 ms  DeleteObjects: 0.899600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 68.118178 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/ScanBlockchain.cs
+  artifactKey: Guid(6d73883144c4ba04fa3d1cb3f7c07d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/ScanBlockchain.cs using Guid(6d73883144c4ba04fa3d1cb3f7c07d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14f0f8814a598bef86d3634757668b3') in 0.022596 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010865 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.207 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1208ms)
+		BeginReloadAssembly (170ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (67ms)
+		EndReloadAssembly (958ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (269ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (448ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (308ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6552 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7622.
+Memory consumption went from 288.6 MB to 284.8 MB.
+Total: 5.466400 ms (FindLiveObjects: 0.797100 ms CreateObjectMapping: 0.385800 ms MarkObjects: 3.338100 ms  DeleteObjects: 0.943800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011284 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.202 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1203ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (940ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (262ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (448ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (316ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6552 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7637.
+Memory consumption went from 288.6 MB to 284.8 MB.
+Total: 4.312400 ms (FindLiveObjects: 0.505200 ms CreateObjectMapping: 0.190100 ms MarkObjects: 2.744700 ms  DeleteObjects: 0.871200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011274 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.171 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1172ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (954ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (275ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (448ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (312ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6552 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7652.
+Memory consumption went from 288.6 MB to 284.8 MB.
+Total: 6.897600 ms (FindLiveObjects: 0.901200 ms CreateObjectMapping: 0.689200 ms MarkObjects: 4.403400 ms  DeleteObjects: 0.902700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010986 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.167 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1168ms)
+		BeginReloadAssembly (123ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (951ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (287ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (428ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (292ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6552 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7667.
+Memory consumption went from 288.7 MB to 284.8 MB.
+Total: 5.015100 ms (FindLiveObjects: 0.614800 ms CreateObjectMapping: 0.215500 ms MarkObjects: 3.071100 ms  DeleteObjects: 1.112600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 255.457603 seconds.
+  path: Assets/EasyWeb3/Prefabs/OverloadNodeURLs.prefab
+  artifactKey: Guid(b63af53dd78be7647929497a82198b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Prefabs/OverloadNodeURLs.prefab using Guid(b63af53dd78be7647929497a82198b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43303dec0c2e89b0d8613559126f6814') in 0.063454 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011163 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.156 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1156ms)
+		BeginReloadAssembly (133ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (939ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (271ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (433ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (293ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6552 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7682.
+Memory consumption went from 288.7 MB to 284.9 MB.
+Total: 4.757200 ms (FindLiveObjects: 0.488600 ms CreateObjectMapping: 0.224900 ms MarkObjects: 3.095000 ms  DeleteObjects: 0.947600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 130.632106 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/CustomContractCall.cs
+  artifactKey: Guid(cc824aad3288bd14b8e84f200edf4b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/CustomContractCall.cs using Guid(cc824aad3288bd14b8e84f200edf4b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6813f5b15c0a2427f3e45d5670a611a3') in 0.017222 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013641 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.169 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1170ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (951ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (320ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (402ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6553 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7698.
+Memory consumption went from 288.7 MB to 284.9 MB.
+Total: 5.358500 ms (FindLiveObjects: 0.531000 ms CreateObjectMapping: 0.268200 ms MarkObjects: 3.328800 ms  DeleteObjects: 1.229400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015982 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.228 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1228ms)
+		BeginReloadAssembly (171ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (978ms)
+			LoadAssemblies (102ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (268ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (467ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (319ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6553 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7713.
+Memory consumption went from 288.8 MB to 284.9 MB.
+Total: 4.334700 ms (FindLiveObjects: 0.499200 ms CreateObjectMapping: 0.266300 ms MarkObjects: 2.796000 ms  DeleteObjects: 0.771900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012773 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.160 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1161ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (936ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (424ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (287ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6553 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7728.
+Memory consumption went from 288.8 MB to 285.0 MB.
+Total: 4.247100 ms (FindLiveObjects: 0.501200 ms CreateObjectMapping: 0.219800 ms MarkObjects: 2.762700 ms  DeleteObjects: 0.762300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010793 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.175 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1176ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (947ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (296ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (426ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (295ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6553 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7743.
+Memory consumption went from 288.8 MB to 285.0 MB.
+Total: 4.816000 ms (FindLiveObjects: 0.485700 ms CreateObjectMapping: 0.198900 ms MarkObjects: 3.197000 ms  DeleteObjects: 0.933100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 433.312842 seconds.
+  path: Assets/EasyWeb3/Prefabs/CustomContractCall.prefab
+  artifactKey: Guid(df35ee58bc8fc7b4c82f30862edfe33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Prefabs/CustomContractCall.prefab using Guid(df35ee58bc8fc7b4c82f30862edfe33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a752ce63f07beb158874c015517c2578') in 0.039544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.717141 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/CustomContractCall.cs
+  artifactKey: Guid(cc824aad3288bd14b8e84f200edf4b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/CustomContractCall.cs using Guid(cc824aad3288bd14b8e84f200edf4b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '157be7dd442fbbf76c1a203d4904b3a5') in 0.002478 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010619 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\donea\Documents\github\easyweb3-unity\Web3\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.353 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1354ms)
+		BeginReloadAssembly (124ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1150ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (264ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (630ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (470ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6553 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 7758.
+Memory consumption went from 288.9 MB to 285.1 MB.
+Total: 4.969700 ms (FindLiveObjects: 0.532200 ms CreateObjectMapping: 0.201600 ms MarkObjects: 3.288100 ms  DeleteObjects: 0.947000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 644.867710 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncVisibleTrigger.cs
+  artifactKey: Guid(57ebfef2a87c49c46ad6454db136f3ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncVisibleTrigger.cs using Guid(57ebfef2a87c49c46ad6454db136f3ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87d9e972c892036bc3c33d77232552a8') in 0.016461 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001197 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/AsyncUniTaskMethodBuilder.cs
+  artifactKey: Guid(68d72a45afdec574ebc26e7de2c38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/AsyncUniTaskMethodBuilder.cs using Guid(68d72a45afdec574ebc26e7de2c38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2941b9c22dd169e7c10719946373ad94') in 0.006027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000965 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncMouseTrigger.cs
+  artifactKey: Guid(57ad5120e9c4d424484c963791467272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncMouseTrigger.cs using Guid(57ad5120e9c4d424484c963791467272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f1912abc0d6d1f553d23583d11885f8') in 0.005709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004829 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/PlayerLoopRunner.cs
+  artifactKey: Guid(340c6d420bb4f484aa8683415ea92571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/PlayerLoopRunner.cs using Guid(340c6d420bb4f484aa8683415ea92571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3c47673c025a8bcc14cbc256b83f71') in 0.006006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015306 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncEnableDisableTrigger.cs
+  artifactKey: Guid(d0bf9142b63b4cb43b693f0b83b3dbe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncEnableDisableTrigger.cs using Guid(d0bf9142b63b4cb43b693f0b83b3dbe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fceda91a88e5c68049549da9e18151ea') in 0.005605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001153 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTaskCompletionSource.cs
+  artifactKey: Guid(ed03524d09e7eb24a9fb9137198feb84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTaskCompletionSource.cs using Guid(ed03524d09e7eb24a9fb9137198feb84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb51029885b2e20ff2136a6b27dd5e9') in 0.005688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000588 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/Hack.cs
+  artifactKey: Guid(4d5a9a3e1f0f069478969f752fde29a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/Hack.cs using Guid(4d5a9a3e1f0f069478969f752fde29a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85773275cb0b870abef4c82a0e01199e') in 0.006333 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Bridge.cs
+  artifactKey: Guid(bd6beac8e0ebd264e9ba246c39429c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Bridge.cs using Guid(bd6beac8e0ebd264e9ba246c39429c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5bc104c8c2e571c228461db336f4a30') in 0.005545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/ExceptionExtensions.cs
+  artifactKey: Guid(930800098504c0d46958ce23a0495202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/ExceptionExtensions.cs using Guid(930800098504c0d46958ce23a0495202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71498a248295732c2ea182216c7b60ea') in 0.005564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000773 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncParticleTrigger.cs
+  artifactKey: Guid(27d3f2efd47fb1d4fb2e9130f97ea8aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncParticleTrigger.cs using Guid(27d3f2efd47fb1d4fb2e9130f97ea8aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe1ecca7684ee9d016092d3eb02a603') in 0.005548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000458 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Threading.cs
+  artifactKey: Guid(4132ea600454134439fa2c7eb931b5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Threading.cs using Guid(4132ea600454134439fa2c7eb931b5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ce45e330b66f47ea26ea93b6aa4ca36') in 0.005545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/NodeURLOverloader.cs
+  artifactKey: Guid(379093a191de5574e946b944c429d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/NodeURLOverloader.cs using Guid(379093a191de5574e946b944c429d894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc28f7a30bc0aa1019844611232c4c17') in 0.002462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000586 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.JsonRpc.RpcClient.dll
+  artifactKey: Guid(9ef86badfc54daf46b51425c5dc0e627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.JsonRpc.RpcClient.dll using Guid(9ef86badfc54daf46b51425c5dc0e627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f1c8683f49826e83c5d8642f2a35ce') in 0.007534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000745 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/Error.cs
+  artifactKey: Guid(5f39f495294d4604b8082202faf98554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/Error.cs using Guid(5f39f495294d4604b8082202faf98554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '956946790aba708f3a6ea186c3fa47be') in 0.005942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001010 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncSubmitTrigger.cs
+  artifactKey: Guid(97e85abc2d7ec0c44adfbe5ee971aad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncSubmitTrigger.cs using Guid(97e85abc2d7ec0c44adfbe5ee971aad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57b0fc535e296854b7bfa80da926a556') in 0.005507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000958 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Editor/SplitterGUILayout.cs
+  artifactKey: Guid(40ef2e46f900131419e869398a8d3c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Editor/SplitterGUILayout.cs using Guid(40ef2e46f900131419e869398a8d3c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '956088e1ba46eec32dff73b1ed1317a1') in 0.006263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000589 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/MoveNextRunner.cs
+  artifactKey: Guid(98649642833cabf44a9dc060ce4c84a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/MoveNextRunner.cs using Guid(98649642833cabf44a9dc060ce4c84a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fd828881aa9f8c84d50399c7f691306') in 0.005606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001120 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerExitTrigger.cs
+  artifactKey: Guid(9e3ed09876a11a84794795809ebee243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerExitTrigger.cs using Guid(9e3ed09876a11a84794795809ebee243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91adf6b7050b49610610ccd2508c128b') in 0.005641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000815 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTaskScheduler.cs
+  artifactKey: Guid(d6cad69921702d5488d96b5ef30df1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTaskScheduler.cs using Guid(d6cad69921702d5488d96b5ef30df1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb66af7165765900e1ddc098cfc3035') in 0.005320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000770 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncEndDragTrigger.cs
+  artifactKey: Guid(8298d43de348acc4aa4e7dbf30472dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncEndDragTrigger.cs using Guid(8298d43de348acc4aa4e7dbf30472dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e40a42a2699730395b04cb42b7b8720') in 0.005654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000559 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTaskVoid.cs
+  artifactKey: Guid(e9f28cd922179634d863011548f89ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTaskVoid.cs using Guid(e9f28cd922179634d863011548f89ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb0e0d7d07879685199497c80b20cf9') in 0.005460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000510 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/DiagnosticsExtensions.cs
+  artifactKey: Guid(f80fb1c9ed4c99447be1b0a47a8d980b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/DiagnosticsExtensions.cs using Guid(f80fb1c9ed4c99447be1b0a47a8d980b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5d32133522e981cfef47c39712b378b') in 0.005569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001416 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Editor/UniTaskTrackerTreeView.cs
+  artifactKey: Guid(52e2d973a2156674e8c1c9433ed031f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Editor/UniTaskTrackerTreeView.cs using Guid(52e2d973a2156674e8c1c9433ed031f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6e8970ffe54245ba26e454ef1db1477') in 0.005929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncLateUpdateTrigger.cs
+  artifactKey: Guid(a4fb2b4c09cb4ec4a82b934f2038eb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncLateUpdateTrigger.cs using Guid(a4fb2b4c09cb4ec4a82b934f2038eb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f414a0b0842adb5201ed5d32ddc1a8') in 0.005768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/EasyWeb3/Materials/nftShowcaseArea.mat
+  artifactKey: Guid(f9b3cfcff50e48a41a0cc743e07d2199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Materials/nftShowcaseArea.mat using Guid(f9b3cfcff50e48a41a0cc743e07d2199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40eac2d206f8885eed4286b8f92e55b6') in 0.959141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/UI/BalanceViewer.cs
+  artifactKey: Guid(1e5a1b6eb2fd11c4f8ca265ac3c2f4e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/UI/BalanceViewer.cs using Guid(1e5a1b6eb2fd11c4f8ca265ac3c2f4e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b72495cf9ca4e34e4271c7a80b69502') in 0.006026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/EasyWeb3/Materials/Sidewalk.mat
+  artifactKey: Guid(0e84ee757b3f3964188d2f1630f4fbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Materials/Sidewalk.mat using Guid(0e84ee757b3f3964188d2f1630f4fbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9afa6b87f3760255a615b7b19618807') in 0.019765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001127 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAll.cs
+  artifactKey: Guid(355997a305ba64248822eec34998a1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAll.cs using Guid(355997a305ba64248822eec34998a1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dea087bfdaeb08eae3ca0af7181c3acf') in 0.005702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncAnimatorTrigger.cs
+  artifactKey: Guid(ae912c37ac7f4cd42b25f22452435103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncAnimatorTrigger.cs using Guid(ae912c37ac7f4cd42b25f22452435103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deb55c4fe904d647b68fec16152f4db1') in 0.005716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015121 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Editor/UniTaskTrackerWindow.cs
+  artifactKey: Guid(5bee3e3860e37484aa3b861bf76d129f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Editor/UniTaskTrackerWindow.cs using Guid(5bee3e3860e37484aa3b861bf76d129f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7230d260368743930d31a1c15bc1fee4') in 0.006100 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003093 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/EnumerableAsyncExtensions.cs
+  artifactKey: Guid(ff50260d74bd54c4b92cf99895549445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/EnumerableAsyncExtensions.cs using Guid(ff50260d74bd54c4b92cf99895549445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebaaea45fd01611fa8fc26d14a27a650') in 0.005551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Editor/UniRx.Async.Editor.asmdef
+  artifactKey: Guid(4129704b5a1a13841ba16f230bf24a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Editor/UniRx.Async.Editor.asmdef using Guid(4129704b5a1a13841ba16f230bf24a57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896aef8267a4a76d73ce2f4419ae16c8') in 0.006534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/TriggerBalanceAction.cs
+  artifactKey: Guid(e2fd9473c23dc2a428dca82ea1949393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/TriggerBalanceAction.cs using Guid(e2fd9473c23dc2a428dca82ea1949393) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a03f5efc55f38ea60c6ad3099ecc941a') in 0.005698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/UI/ScanViewer.cs
+  artifactKey: Guid(b2758f61843f3ce4ea704060dd3c5b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/UI/ScanViewer.cs using Guid(b2758f61843f3ce4ea704060dd3c5b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c19d0a3b0e81a091c95770c68f19f7e') in 0.005605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000606 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/UI/UIManager.cs
+  artifactKey: Guid(6ef188637cb98b541a4c09d473649d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/UI/UIManager.cs using Guid(6ef188637cb98b541a4c09d473649d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5d068176379b2e6b9f051c2be7fbcaf') in 0.005734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000550 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.JsonRpc.Client.dll
+  artifactKey: Guid(1ad631818b389bb478d066f821a0eed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.JsonRpc.Client.dll using Guid(1ad631818b389bb478d066f821a0eed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4abf2f8277780e126a6031e5ef835567') in 0.005751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002969 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/AsyncMethodBuilderAttribute.cs
+  artifactKey: Guid(02ce354d37b10454e8376062f7cbe57a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/AsyncMethodBuilderAttribute.cs using Guid(02ce354d37b10454e8376062f7cbe57a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c68fd4e637a91f15e954980b4ed11fc6') in 0.005402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncJointTrigger.cs
+  artifactKey: Guid(04dc74e7b2368094f9153921804a1fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncJointTrigger.cs using Guid(04dc74e7b2368094f9153921804a1fb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c53320e961cfc0fb6983e4baf104506') in 0.005540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000553 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/CancellationTokenHelper.cs
+  artifactKey: Guid(53d1b536fc7e2d4458294ee2c7d9b743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/CancellationTokenHelper.cs using Guid(53d1b536fc7e2d4458294ee2c7d9b743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2aeeb223a581089792fb67451cb3a9e') in 0.005720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal
+  artifactKey: Guid(16cac421b644cfd4f97e3f40ef66fa51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal using Guid(16cac421b644cfd4f97e3f40ef66fa51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47a3342ed4d40e23c98b3d79e5127069') in 0.005803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/EasyWeb3/Lib/Newtonsoft.Json.dll
+  artifactKey: Guid(70a23260378db5d46ab7e5f3b9bd96fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Newtonsoft.Json.dll using Guid(70a23260378db5d46ab7e5f3b9bd96fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b50a383edf85e112c19b63c9098d85c') in 0.005136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/ArrayPool.cs
+  artifactKey: Guid(f83ebad81fb89fb4882331616ca6d248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/ArrayPool.cs using Guid(f83ebad81fb89fb4882331616ca6d248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3c4d83871bcdd39e236f21b808cc37f') in 0.005747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000637 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncSelectTrigger.cs
+  artifactKey: Guid(fcc2347251a4fc5498a03f0c17382920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncSelectTrigger.cs using Guid(fcc2347251a4fc5498a03f0c17382920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd50abee68fe14b87f2349fe9d0117c32') in 0.005570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Factory.cs
+  artifactKey: Guid(4e12b66d6b9bd7845b04a594cbe386b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Factory.cs using Guid(4e12b66d6b9bd7845b04a594cbe386b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6cbc24aaa2c1c6dc42bcefd9826dfe4') in 0.005425 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerUpTrigger.cs
+  artifactKey: Guid(7a0493ea32f81314cbbaf2b635ba3167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerUpTrigger.cs using Guid(7a0493ea32f81314cbbaf2b635ba3167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2ffa28e941a546b22c65eee446d816') in 0.005802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTrigger2DTrigger.cs
+  artifactKey: Guid(102f8eba36bc2a54e878e67aca9686e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTrigger2DTrigger.cs using Guid(102f8eba36bc2a54e878e67aca9686e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c0665af0985b0b8c2a9abc539834c81') in 0.005787 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002439 seconds.
+  path: Assets/EasyWeb3/Lib/BouncyCastle.Crypto.dll
+  artifactKey: Guid(ad01105bf212922409972079dce61533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/BouncyCastle.Crypto.dll using Guid(ad01105bf212922409972079dce61533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db11fe990b6f3e09316576e12818cfc8') in 0.005722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011810 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTriggerBase.cs
+  artifactKey: Guid(2c0c2bcee832c6641b25949c412f020f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTriggerBase.cs using Guid(2c0c2bcee832c6641b25949c412f020f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a166d4f07a32120eece64b96beb79340') in 0.005687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000417 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncAwakeTrigger.cs
+  artifactKey: Guid(ef2840a2586894741a0ae211b8fd669b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncAwakeTrigger.cs using Guid(ef2840a2586894741a0ae211b8fd669b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9761c559305fc17baa85cfde219b0f3') in 0.006691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncStartTrigger.cs
+  artifactKey: Guid(b4fd0f75e54ec3d4fbcb7fc65b11646b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncStartTrigger.cs using Guid(b4fd0f75e54ec3d4fbcb7fc65b11646b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab594409b3f583f660ff8399c56c8959') in 0.006338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000627 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UnityAsyncExtensions.Jobs.cs
+  artifactKey: Guid(30979a768fbd4b94f8694eee8a305c99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UnityAsyncExtensions.Jobs.cs using Guid(30979a768fbd4b94f8694eee8a305c99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feaf6731095b3068bf33bded11351d8e') in 0.005531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001226 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.Contracts.dll
+  artifactKey: Guid(af5e3164b3ecb804ca87f2be16b9bd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.Contracts.dll using Guid(af5e3164b3ecb804ca87f2be16b9bd86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0578898011808a9778651b2bfadf8543') in 0.005637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000460 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncUpdateSelectedTrigger.cs
+  artifactKey: Guid(ba5b0a4234e164e41b85f10b709d72e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncUpdateSelectedTrigger.cs using Guid(ba5b0a4234e164e41b85f10b709d72e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37805c8ea8dc999ea85311d35b17a90e') in 0.005540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000778 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTaskObservableExtensions.cs
+  artifactKey: Guid(eaea262a5ad393d419c15b3b2901d664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTaskObservableExtensions.cs using Guid(eaea262a5ad393d419c15b3b2901d664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f5995faf87f8792ffd8c9c94ecd887') in 0.005846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000776 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTaskExtensions.cs
+  artifactKey: Guid(05460c617dae1e440861a7438535389f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTaskExtensions.cs using Guid(05460c617dae1e440861a7438535389f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78e6324fee8f122a43b48ba52746f5f8') in 0.005548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000652 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncMoveTrigger.cs
+  artifactKey: Guid(1699926e875c24d4aa34bc8817f96f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncMoveTrigger.cs using Guid(1699926e875c24d4aa34bc8817f96f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab87e414bfe01b99f9cec13e6b9f3bf') in 0.005616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000804 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs
+  artifactKey: Guid(e891aaac17b933a47a9d7fa3b8e1226f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs using Guid(e891aaac17b933a47a9d7fa3b8e1226f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a0bf593bb0d7865dbc0db511e674d41') in 0.005879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000755 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/TriggerNFTLoader.cs
+  artifactKey: Guid(2d7720ac8b3facd48b825fb7c6a1d064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/TriggerNFTLoader.cs using Guid(2d7720ac8b3facd48b825fb7c6a1d064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d962222c17486d90f837c6fd9daa182') in 0.005873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerEnterTrigger.cs
+  artifactKey: Guid(18887d476d48533498efd14224a2f651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerEnterTrigger.cs using Guid(18887d476d48533498efd14224a2f651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e732b64d7781b83b1624286641a3d5c0') in 0.005905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WaitUntil.cs
+  artifactKey: Guid(87c9c533491903a4288536b5ac173db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WaitUntil.cs using Guid(87c9c533491903a4288536b5ac173db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee24cbdb7286978b9fea82d236b1d8b3') in 0.005692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002751 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.RPC.dll
+  artifactKey: Guid(fb5231ecdfa87bf42892c3954f759d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.RPC.dll using Guid(fb5231ecdfa87bf42892c3954f759d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddee0cec51a2916f3d012456e58482f1') in 0.005522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000386 seconds.
+  path: Assets/EasyWeb3/Lib/easyweb3libs.dll
+  artifactKey: Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/easyweb3libs.dll using Guid(521b6a239237c614f8ebc42743a218ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2020c03aa9bf9234263310c801cbfe96') in 0.002342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000511 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.Signer.dll
+  artifactKey: Guid(53b956c1e1dd1dd40aaa4e460f56f803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.Signer.dll using Guid(53b956c1e1dd1dd40aaa4e460f56f803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '016694b48959f15d8db47c7e80cc11a3') in 0.005367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001300 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTriggerTrigger.cs
+  artifactKey: Guid(46bbbbaa910762c4786906e10b6b7b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTriggerTrigger.cs using Guid(46bbbbaa910762c4786906e10b6b7b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14934267cd9455a6a17765d3cac78df') in 0.005583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Run.cs
+  artifactKey: Guid(8473162fc285a5f44bcca90f7da073e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Run.cs using Guid(8473162fc285a5f44bcca90f7da073e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1af4d80a7cf0578ddbde119adc455de4') in 0.006553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000702 seconds.
+  path: Assets/EasyWeb3/Prefabs/TriggerNFTLoader.prefab
+  artifactKey: Guid(37c2d2615d0f9f94fa61f7864b271df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Prefabs/TriggerNFTLoader.prefab using Guid(37c2d2615d0f9f94fa61f7864b271df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a4c7e0a4ad99a7c224f2be40f7202f') in 0.043245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000806 seconds.
+  path: Assets/EasyWeb3/Materials/Player.mat
+  artifactKey: Guid(15c33cd080f156a48aa47f5a4778f5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Materials/Player.mat using Guid(15c33cd080f156a48aa47f5a4778f5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c89e7e61d3843a6872f5e70ae98a31ec') in 0.017304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.RLP.dll
+  artifactKey: Guid(f6ce81e3802753f418eeb82d169307b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.RLP.dll using Guid(f6ce81e3802753f418eeb82d169307b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aa1f639e8d3717b49064b26edab7c12') in 0.006021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTaskExtensions.Shorthand.cs
+  artifactKey: Guid(4b4ff020f73dc6d4b8ebd4760d61fb43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTaskExtensions.Shorthand.cs using Guid(4b4ff020f73dc6d4b8ebd4760d61fb43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5ee083f3c6c1e75a83e67b4e474059') in 0.005723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000535 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UnityAsyncExtensions.cs
+  artifactKey: Guid(8cc7fd65dd1433e419be4764aeb51391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UnityAsyncExtensions.cs using Guid(8cc7fd65dd1433e419be4764aeb51391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a4ab30e6e2184c07d4696f881f2e23') in 0.005951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003291 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncScrollTrigger.cs
+  artifactKey: Guid(7c751e9d3deb97d4d8691a8a583c2afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncScrollTrigger.cs using Guid(7c751e9d3deb97d4d8691a8a583c2afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481380ecb7b5eb5b98757f6886965913') in 0.006016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/EasyWeb3/Materials/nftUI.mat
+  artifactKey: Guid(c97765027d0e69e40b0fccf95aaa18b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Materials/nftUI.mat using Guid(c97765027d0e69e40b0fccf95aaa18b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256c5782af23ccb4ff6a23bd0b2657e1') in 0.017291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005474 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/UI/TokenViewer.cs
+  artifactKey: Guid(3874f8d9008bc344593d8c688670c2bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/UI/TokenViewer.cs using Guid(3874f8d9008bc344593d8c688670c2bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7050124f4c9f3d257c5a1644681d021b') in 0.006160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices
+  artifactKey: Guid(1e3ca23cc64533c4fabe83839d8ba60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CompilerServices using Guid(1e3ca23cc64533c4fabe83839d8ba60f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7068d11af1493ad6dbce91abc25db0d') in 0.005947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/ArrayUtil.cs
+  artifactKey: Guid(23146a82ec99f2542a87971c8d3d7988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/ArrayUtil.cs using Guid(23146a82ec99f2542a87971c8d3d7988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f98614ed60af7895687248aeaac2fc46') in 0.005568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000584 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCollisionTrigger.cs
+  artifactKey: Guid(72db4a683be8f6a428823502599014a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCollisionTrigger.cs using Guid(72db4a683be8f6a428823502599014a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93269df0c6f75343725e92906ef9d1e') in 0.005919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001350 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncUpdateTrigger.cs
+  artifactKey: Guid(c6053bbe25af0d6439712f7c5fc4afc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncUpdateTrigger.cs using Guid(c6053bbe25af0d6439712f7c5fc4afc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7e40a4db4953a17e34a5cb045106176') in 0.006048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDropTrigger.cs
+  artifactKey: Guid(42d65fd5e4be25f41a927eca25b0acf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDropTrigger.cs using Guid(42d65fd5e4be25f41a927eca25b0acf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540d1157118147fa79e04e5434eb066e') in 0.005541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008999 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/WeakDictionary.cs
+  artifactKey: Guid(6c78563864409714593226af59bcb6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/WeakDictionary.cs using Guid(6c78563864409714593226af59bcb6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '791de02ec31eeb36a5fd00f71a187316') in 0.006080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001242 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/AsyncUnit.cs
+  artifactKey: Guid(4f95ac245430d304bb5128d13b6becc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/AsyncUnit.cs using Guid(4f95ac245430d304bb5128d13b6becc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f38ea59c5e28844c1128e37e7038236') in 0.005624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CancellationTokenSourceExtensions.cs
+  artifactKey: Guid(22d85d07f1e70ab42a7a4c25bd65e661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CancellationTokenSourceExtensions.cs using Guid(22d85d07f1e70ab42a7a4c25bd65e661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '261b0175efb289c6fba42e93b70428de') in 0.005706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Delay.cs
+  artifactKey: Guid(ecff7972251de0848b2c0fa89bbd3489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.Delay.cs using Guid(ecff7972251de0848b2c0fa89bbd3489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42b949584f023b69bf4243a5e8991d05') in 0.005694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000597 seconds.
+  path: Assets/EasyWeb3/Scripts/HelperComponents/CameraController.cs
+  artifactKey: Guid(c68ff1f9109c0bc4490d512bb91b677b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/HelperComponents/CameraController.cs using Guid(c68ff1f9109c0bc4490d512bb91b677b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f02ab767b68bd1b2e20225e11c60e559') in 0.005716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000399 seconds.
+  path: Assets/EasyWeb3/Scripts/HelperComponents/GameSystem.cs
+  artifactKey: Guid(250dd98dc4e06544fb00178ff03b0a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/HelperComponents/GameSystem.cs using Guid(250dd98dc4e06544fb00178ff03b0a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffd51c689b2e3000e64d33f41f4d68d') in 0.005757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001486 seconds.
+  path: Assets/EasyWeb3
+  artifactKey: Guid(1ccf97c44a63de64a8fb74b5dd9c240e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3 using Guid(1ccf97c44a63de64a8fb74b5dd9c240e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d99d31560650ca6327b96fa6e6245af') in 0.008676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000482 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCanvasGroupChangedTrigger.cs
+  artifactKey: Guid(eddba832648f83046a320ffcacfc771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCanvasGroupChangedTrigger.cs using Guid(eddba832648f83046a320ffcacfc771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '336b8cdea7e314223342c283ef42b748') in 0.006031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004262 seconds.
+  path: Assets/EasyWeb3/Lib/Common.Logging.Core.dll
+  artifactKey: Guid(1fa4a84d9e8b659408e8f9ad1bd0ed53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Common.Logging.Core.dll using Guid(1fa4a84d9e8b659408e8f9ad1bd0ed53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cdd481ce98ee6e219597453ca483dab') in 0.005777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/EasyWeb3/Scripts/HelperComponents/Door.cs
+  artifactKey: Guid(df2acf35d90ea484c820cb3558194084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/HelperComponents/Door.cs using Guid(df2acf35d90ea484c820cb3558194084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2d70189b2d22d8af6d81dacbb897f3b') in 0.006126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000510 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTriggerExtensions.cs
+  artifactKey: Guid(59b61dbea1562a84fb7a38ae0a0a0f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTriggerExtensions.cs using Guid(59b61dbea1562a84fb7a38ae0a0a0f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e696b3b3c47342127a6fbaf583530d60') in 0.006111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCancelTrigger.cs
+  artifactKey: Guid(291886b6e5f2d044a85b2a4dedcaca97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCancelTrigger.cs using Guid(291886b6e5f2d044a85b2a4dedcaca97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e19572ec67fcd7a134479642c28fd44b') in 0.005819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001165 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAny.cs
+  artifactKey: Guid(c32578978c37eaf41bdd90e1b034637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAny.cs using Guid(c32578978c37eaf41bdd90e1b034637d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e26f6db654312b700dfd5d610a3ab3f') in 0.006036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.Util.dll
+  artifactKey: Guid(58b1dfc49221b414f92de915eabd9a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.Util.dll using Guid(58b1dfc49221b414f92de915eabd9a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18327bc107b16379aee65f22157d6aa3') in 0.005463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000616 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.Hex.dll
+  artifactKey: Guid(ddb0883ba9a6fe647b67c560687f023c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.Hex.dll using Guid(ddb0883ba9a6fe647b67c560687f023c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0782595d87ae009d951d51953d6465c') in 0.005896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000751 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CancellationTokenExtensions.cs
+  artifactKey: Guid(4be7209f04146bd45ac5ee775a5f7c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CancellationTokenExtensions.cs using Guid(4be7209f04146bd45ac5ee775a5f7c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc0636b67e241154985508ecb167b23') in 0.005707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDragTrigger.cs
+  artifactKey: Guid(52242547ba60ea74f8a2e3bbab5fcdfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDragTrigger.cs using Guid(52242547ba60ea74f8a2e3bbab5fcdfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4499746bece92d1e1d6574a48dbc69c9') in 0.005960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000478 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncEventTrigger.cs
+  artifactKey: Guid(89997820797ad6d43b17971a8bd0d8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncEventTrigger.cs using Guid(89997820797ad6d43b17971a8bd0d8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00ddede8011fa7209cf25d846ead590e') in 0.005839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncRectTransformTrigger.cs
+  artifactKey: Guid(dfe3470221c66c84397c0783c62b24e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncRectTransformTrigger.cs using Guid(dfe3470221c66c84397c0783c62b24e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03dc52cc6f622919cf675567f9e8ed5b') in 0.005595 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005024 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCollision2DTrigger.cs
+  artifactKey: Guid(fbeb63f69bedec44f8003730887f914b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncCollision2DTrigger.cs using Guid(fbeb63f69bedec44f8003730887f914b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eca74c905907a68f8631f3bcd3bbdad4') in 0.005713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000563 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/Web3Player.cs
+  artifactKey: Guid(c7e839574e5f51646bd9d914815e4148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/Web3Player.cs using Guid(c7e839574e5f51646bd9d914815e4148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '582c985b32a6fc713692d68caaafce68') in 0.005800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000791 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/UI/TestViewer.cs
+  artifactKey: Guid(080c14137fff42443931e655ac2b943e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/UI/TestViewer.cs using Guid(080c14137fff42443931e655ac2b943e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0b528cae6238524c71229959b27a5fd') in 0.006187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000712 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/LazyPromise.cs
+  artifactKey: Guid(fe7a4187b7f89f84582fd1e466a7f27e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/LazyPromise.cs using Guid(fe7a4187b7f89f84582fd1e466a7f27e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d2dcbe57cd62bdb6d40cc7c6e722b5') in 0.006204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000731 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTransformChangedTrigger.cs
+  artifactKey: Guid(053f983cd760f5e4394be8fd657243c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncTransformChangedTrigger.cs using Guid(053f983cd760f5e4394be8fd657243c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64898933a272fd86f12b25e49b08216b') in 0.005799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/EasyWeb3/Materials/Ground.mat
+  artifactKey: Guid(69291d0e255f4dd42871d21f00d2f1a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Materials/Ground.mat using Guid(69291d0e255f4dd42871d21f00d2f1a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '802e7418ecc68b5ad8fbd112a3a4386b') in 0.016871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001069 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/ArrayPoolUtil.cs
+  artifactKey: Guid(424cc208fb61d4e448b08fcfa0eee25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/ArrayPoolUtil.cs using Guid(424cc208fb61d4e448b08fcfa0eee25e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ee2eba4f6c9fbd127c5aeffd42f99f') in 0.005768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000718 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/TaskTracker.cs
+  artifactKey: Guid(a203c73eb4ccdbb44bddfd82d38fdda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/TaskTracker.cs using Guid(a203c73eb4ccdbb44bddfd82d38fdda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e58c513dc4bb247b63b42b1ab7ba1d') in 0.005923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000625 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/TransactionProgressTracker.cs
+  artifactKey: Guid(5c88eaf4340fa344f85e31b10b4b6c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/TransactionProgressTracker.cs using Guid(5c88eaf4340fa344f85e31b10b4b6c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611f43ef43535432260ea1f83c77fa49') in 0.005756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000405 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.Model.dll
+  artifactKey: Guid(5a1099f686299b04f94eab55195f902e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.Model.dll using Guid(5a1099f686299b04f94eab55195f902e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38f8feecc15119ec188c1c1b9f97e93b') in 0.005993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000384 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/ContinuationQueue.cs
+  artifactKey: Guid(f66c32454e50f2546b17deadc80a4c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/ContinuationQueue.cs using Guid(f66c32454e50f2546b17deadc80a4c77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bda8450b0cbfd0aa9fa01a1343218c3') in 0.005761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.BlockchainProcessing.dll
+  artifactKey: Guid(61e4f6ae72b38ee4c9c3e0a350626ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.BlockchainProcessing.dll using Guid(61e4f6ae72b38ee4c9c3e0a350626ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e47340a82e8c1c18e53ac0b091cae5d3') in 0.005825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/IAwaiter.cs
+  artifactKey: Guid(3e4d023d8404ab742b5e808c98097c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/IAwaiter.cs using Guid(3e4d023d8404ab742b5e808c98097c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3add23a941343a1320b842d5ade786eb') in 0.006070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncBeginDragTrigger.cs
+  artifactKey: Guid(171fd2191eb22af4fbd92b51815ca757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncBeginDragTrigger.cs using Guid(171fd2191eb22af4fbd92b51815ca757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e44f4caafac74f904d620f5f5d13968') in 0.006175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000554 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Progress.cs
+  artifactKey: Guid(e3377e2ae934ed54fb8fd5388e2d9eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Progress.cs using Guid(e3377e2ae934ed54fb8fd5388e2d9eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74d7ccb7651f8d1e43bb6dff5f7cc04f') in 0.006531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerClickTrigger.cs
+  artifactKey: Guid(9f8865abf2db3d248b3730cdb18bb8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerClickTrigger.cs using Guid(9f8865abf2db3d248b3730cdb18bb8b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb02690c377d83e65d05334202062b2f') in 0.006296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.Web3.dll
+  artifactKey: Guid(f32e9116fafc91a4db12685daf357bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.Web3.dll using Guid(f32e9116fafc91a4db12685daf357bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f32020749f34373635fccad98f21ca4b') in 0.006245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000526 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/EnumeratorAsyncExtensions.cs
+  artifactKey: Guid(bc661232f11e4a741af54ba1c175d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/EnumeratorAsyncExtensions.cs using Guid(bc661232f11e4a741af54ba1c175d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faad9a4f8da563bb6a382c2db48418eb') in 0.006411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000866 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAny.Generated.cs
+  artifactKey: Guid(13d604ac281570c4eac9962429f19ca9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAny.Generated.cs using Guid(13d604ac281570c4eac9962429f19ca9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '557a9815d0d40d7ee35acea95bf8bb71') in 0.006088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000955 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/PlayerLoopHelper.cs
+  artifactKey: Guid(15fb5b85042f19640b973ce651795aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/PlayerLoopHelper.cs using Guid(15fb5b85042f19640b973ce651795aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d5a8026bf65e8035996c01d7955a72b') in 0.005914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000448 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UnityAsyncExtensions.uGUI.cs
+  artifactKey: Guid(6804799fba2376d4099561d176101aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UnityAsyncExtensions.uGUI.cs using Guid(6804799fba2376d4099561d176101aff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05af759e6432e9e2c9833c14c8db664b') in 0.005934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001033 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerDownTrigger.cs
+  artifactKey: Guid(7c5132395605eaa498a7efedee5acdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncPointerDownTrigger.cs using Guid(7c5132395605eaa498a7efedee5acdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cd2270edde2fee7787f8cf0ecace681') in 0.005772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001155 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/RuntimeHelpersAbstraction.cs
+  artifactKey: Guid(94975e4d4e0c0ea4ba787d3872ce9bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/RuntimeHelpersAbstraction.cs using Guid(94975e4d4e0c0ea4ba787d3872ce9bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6422b1bdf2e92730489e7100a894767b') in 0.006091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000702 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDestroyTrigger.cs
+  artifactKey: Guid(f4afdcb1cbadf954ba8b1cf465429e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDestroyTrigger.cs using Guid(f4afdcb1cbadf954ba8b1cf465429e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7724974b4e4aae04f81155ac0ad1ce2a') in 0.006077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000819 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/ReusablePromise.cs
+  artifactKey: Guid(a8cfc99b5928c0242919aac2121b02bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/ReusablePromise.cs using Guid(a8cfc99b5928c0242919aac2121b02bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '284eed5feff1f47763b9be2eeaf688ce') in 0.006182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001012 seconds.
+  path: Assets/EasyWeb3/Scripts/Web3Components/UI/ChainViewer.cs
+  artifactKey: Guid(b98d68ea38b575047b78a08cae04957a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/Web3Components/UI/ChainViewer.cs using Guid(b98d68ea38b575047b78a08cae04957a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd334f15d5b1ca422457dc80cc09b6068') in 0.006240 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010756 seconds.
+  path: Assets/EasyWeb3/Scenes/demo.unity
+  artifactKey: Guid(92b3a368a10b938469cc0ca4203bb4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scenes/demo.unity using Guid(92b3a368a10b938469cc0ca4203bb4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57d0b1aa2158e567cd2142c112b44d41') in 0.006132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005142 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers
+  artifactKey: Guid(2c8b4c6fc4d45d4459dfb0baa2632643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers using Guid(2c8b4c6fc4d45d4459dfb0baa2632643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b50639da18a6b59b17067db3c8bafab') in 0.006114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Editor
+  artifactKey: Guid(547b2082a4a750a46806749acf98b68b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Editor using Guid(547b2082a4a750a46806749acf98b68b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39381d072a699fbb3e8c81ef426bb85f') in 0.006142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000808 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncFixedUpdateTrigger.cs
+  artifactKey: Guid(c74b906c4294aaa4e900f6e7f8b36df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncFixedUpdateTrigger.cs using Guid(c74b906c4294aaa4e900f6e7f8b36df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a26a58cdf45deecfb74af5cce84ab59') in 0.005993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000684 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/UnityEqualityComparer.cs
+  artifactKey: Guid(ebaaf14253c9cfb47b23283218ff9b67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/UnityEqualityComparer.cs using Guid(ebaaf14253c9cfb47b23283218ff9b67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc88c16b506995a4f2b565f5e19e670') in 0.006173 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000884 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncInitializePotentialDragTrigger.cs
+  artifactKey: Guid(ae0733adc239a324f8b934ffb119abd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncInitializePotentialDragTrigger.cs using Guid(ae0733adc239a324f8b934ffb119abd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c89ad6beb9f6da9f17cad221a4a83286') in 0.006093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001124 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/MinimumQueue.cs
+  artifactKey: Guid(7d63add489ccc99498114d79702b904d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/MinimumQueue.cs using Guid(7d63add489ccc99498114d79702b904d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c179afca91a5cb29b505378f040e86') in 0.005956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001027 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Internal/PromiseHelper.cs
+  artifactKey: Guid(173f9b763911bf847b7dfbf31ee87fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Internal/PromiseHelper.cs using Guid(173f9b763911bf847b7dfbf31ee87fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97fcffa77ba0d06d00625d3a51e91530') in 0.006287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005570 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDeselectTrigger.cs
+  artifactKey: Guid(30faa9be5bd883e488bdc52f4825c4da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/Triggers/AsyncDeselectTrigger.cs using Guid(30faa9be5bd883e488bdc52f4825c4da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fe916b3225fc123b949d0de071dee61') in 0.005981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000823 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.cs
+  artifactKey: Guid(8947adf23181ff04db73829df217ca94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.cs using Guid(8947adf23181ff04db73829df217ca94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f371af061c6d071eb851ce0ae777233e') in 0.005884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000786 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAll.Generated.cs
+  artifactKey: Guid(5110117231c8a6d4095fd0cbd3f4c142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniTask.WhenAll.Generated.cs using Guid(5110117231c8a6d4095fd0cbd3f4c142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37680d978f08696c1121335cb970d9b') in 0.005827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004657 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/UniRx.Async.asmdef
+  artifactKey: Guid(f51ebe6a0ceec4240a699833d6309b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/UniRx.Async.asmdef using Guid(f51ebe6a0ceec4240a699833d6309b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1599825262dc2968630c57daaa6df6') in 0.005614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000650 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.Accounts.dll
+  artifactKey: Guid(7af0507e10e4bd54a8f1dfdb2b36cfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.Accounts.dll using Guid(7af0507e10e4bd54a8f1dfdb2b36cfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31607f990c5dbe303855a78e2a52d70') in 0.006345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003679 seconds.
+  path: Assets/EasyWeb3/Lib/Nethereum.KeyStore.dll
+  artifactKey: Guid(962e8b21e0b0ed342a4588c6c85634b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/Nethereum.KeyStore.dll using Guid(962e8b21e0b0ed342a4588c6c85634b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c39abacf402e902430d57b4211517a10') in 0.006114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007864 seconds.
+  path: Assets/EasyWeb3/Lib/UniRx.Async/CancellationTokenEqualityComparer.cs
+  artifactKey: Guid(7d739f510b125b74fa7290ac4335e46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Lib/UniRx.Async/CancellationTokenEqualityComparer.cs using Guid(7d739f510b125b74fa7290ac4335e46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e525ac8e561c37f3fd40dd547a234e5e') in 0.005751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000823 seconds.
+  path: Assets/EasyWeb3/Scripts/HelperComponents/PlayerController.cs
+  artifactKey: Guid(301c9907acf4aa64ebc2e16fb303d1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EasyWeb3/Scripts/HelperComponents/PlayerController.cs using Guid(301c9907acf4aa64ebc2e16fb303d1bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13e5fdde9331b6b1388aa8f3b64826a2') in 0.005643 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 7.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 63 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 8348.
+Memory consumption went from 184.1 MB to 180.3 MB.
+Total: 9.642000 ms (FindLiveObjects: 0.665400 ms CreateObjectMapping: 0.290500 ms MarkObjects: 7.651500 ms  DeleteObjects: 1.033400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 12.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 64 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (3.8 MB). Loaded Objects now: 8348.
+Memory consumption went from 184.2 MB to 180.4 MB.
+Total: 12.447400 ms (FindLiveObjects: 0.746900 ms CreateObjectMapping: 0.623800 ms MarkObjects: 9.534700 ms  DeleteObjects: 1.540500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

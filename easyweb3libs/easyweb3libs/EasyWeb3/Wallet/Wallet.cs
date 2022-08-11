@@ -17,6 +17,14 @@ namespace EasyWeb3
             }
         }
 
+        public string Address
+        {
+            get
+            {
+                return m_Address;
+            }
+        }
+
         public Wallet(string _addr, ChainId _i) : base(_i)
         {
             m_Address = _addr;
