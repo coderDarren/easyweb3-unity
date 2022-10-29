@@ -4,9 +4,9 @@
 
 ### PREFACE
 
-This package was primed for the Unity Asset Store, but Unity mentioned to me that they want nothing to do with Web3 from their creators; and have since removed similar projects from their store.
+This package was primed for the Unity Asset Store, but Unity mentioned to me that they aren't ready to accept Web3 tools from their creators; and have since removed similar projects from their store.
 
-For that reason I have no choice but to put this repo out into the wild, otherwise it will just collect dust.
+For that reason I have am putting this repo out into the wild, otherwise it will just collect dust.
 
 This project is a comprehensive blockchain reader for any EVM chain. Due to massive security implications, there are no wallet management, key management, or transaction sender functions in here as it would likely compromise the players.
 
